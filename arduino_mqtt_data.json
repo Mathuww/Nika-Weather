@@ -1,0 +1,7 @@
+{
+  "broker_url":"mqtt.univ-cotedazur.fr",
+  "broker_protocol_mqtt_mqtts_ws_wss":"wss",
+  "broker_port":443,
+  "salle":"FABLAB_21_22",
+  "KEY":"M2_projet/temp"
+}
