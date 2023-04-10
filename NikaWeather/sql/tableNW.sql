@@ -1,12 +1,17 @@
 DROP TABLE NW_recep;
 
+DROP TABLE NW_receps;
+
+DROP TABLE NW_stat;
+
 DROP TABLE NW_stats;
 
 CREATE TABLE
-    NW_recep (
+    NW_receps (
         id INTEGER PRIMARY KEY AUTO_INCREMENT,
         date DATETIME,
-        recep_temp DECIMAL(4, 2),
+        time_zone VARCHAR(6),
+        recep_temp_average DECIMAL(4, 2),
         recep_hum DECIMAL(3, 1),
         recep_wind_direction DECIMAL(4, 1),
         recep_wind_speed DECIMAL(4, 1),
@@ -19,7 +24,10 @@ CREATE TABLE
     NW_stats (
         id INTEGER PRIMARY KEY AUTO_INCREMENT,
         date DATETIME,
-        recep_temp DECIMAL(4, 2),
+        time_zone VARCHAR(6),
+        recep_temp_average DECIMAL(4, 2),
+        recep_temp_min DECIMAL(4, 2),
+        recep_temp_max DECIMAL(4, 2),
         recep_hum DECIMAL(3, 1),
         recep_wind_direction DECIMAL(4, 1),
         recep_wind_speed DECIMAL(3, 1),
