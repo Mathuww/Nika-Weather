@@ -1,8 +1,12 @@
+/*Au cas où pour tout rénitialiser*/
+
 DROP TABLE NW_recep;
 
-DROP TABLE NW_receps;
-
 DROP TABLE NW_stat;
+
+/*Effacer les deux tables*/
+
+DROP TABLE NW_receps;
 
 DROP TABLE NW_stats;
 

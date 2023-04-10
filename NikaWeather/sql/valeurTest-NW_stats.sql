@@ -1,4 +1,4 @@
-DELETE FROM nw_recep;
+DELETE FROM nw_stats;
 
 /*Les moyennes de températures sont arrondis à l'unité (!info : le 0.5 est arrondie à l'inférieur)*/
 

@@ -1,12 +1,14 @@
 <?php
+//Se connecter à la base de donnée nwv1
 include_once('connexionDataBase.php');
+
+//Récupérer les données de la table receps
 $sql_receps = 'SELECT * FROM NW_receps';
-
-
 $recepsStatement = $mysqlClient->prepare($sql_receps);
 $recepsStatement->execute();
 $receps = $recepsStatement->fetchAll();
 
+//Afficher les données de la table receps
 foreach ($receps as $recep) {
 ?>
     <p><?php
@@ -15,34 +17,34 @@ foreach ($receps as $recep) {
 }
 
 
-$sql_statsINSERT = 'INSERT INTO nw_stats(date, recep_temp, recep_hum, recep_wind_direction, recep_wind_speed, recep_UV, recep_precipitation, recep_precipition_speed)
-VALUES (:date, :recep_temp, :recep_hum, :recep_wind_direction, :recep_wind_speed, :recep_UV, :recep_precipitation, :recep_precipition_speed)';
+echo "<br>";
+echo "___________________________________________________________________________________________" . "<br>";
+echo "<br>";
 
+/*Requête SQL pour insérer des données dans la table NW_stats*/
+$sql_statsINSERT = 'INSERT INTO nw_stats(date, recep_temp_average) VALUES (:date, :recep_temp_average);';
 $insertStats = $mysqlClient->prepare($sql_statsINSERT);
 
+/*Avec les données de la table NW_recep de la première indentation*/
 $insertStats->execute([
-    'date' => $recep[0]["date"],
-    'recep_temp' => $recep[0]["recep_temp"],
-    'recep_hum' => $recep[0]["recep_hum"],
-    'recep_wind_direction' => $recep[0]["recep_wind_direction"],
-    'recep_wind_speed' => $recep[0]["recep_wind_speed"],
-    'recep_UV' => $recep[0]["recep_UV"],
-    'recep_precipitation' => $recep[0]["recep_precipitation"],
-    'recep_precipition_speed' => $recep[0]["recep_precipition_speed"]
+    'date' => $receps[0]["date"],
+    'recep_temp_average' => $receps[0]["recep_temp_average"]
 ]);
-// $receps = $recepStatement->fetchAll();
+echo "Le transfert de données a bien fonctionné (si aucun message d'erreur est affiché).";
 
-echo "";
-echo "___________________________________________________________________________________________";
-echo "";
 
+echo "<br>";
+echo "___________________________________________________________________________________________" . "<br>";
+echo "<br>";
+
+
+//Récupérer les données de la table stats
 $sql_stats = 'SELECT * FROM nw_stats';
-
-
 $statsStatement = $mysqlClient->prepare($sql_stats);
 $statsStatement->execute();
 $stats = $statsStatement->fetchAll();
 
+//Afficher les données de la table stats
 foreach ($stats as $stat) {
 ?>
     <p><?php
