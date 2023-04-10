@@ -2,8 +2,11 @@
 //Se connecter à la base de donnée nwv1
 include_once('connexionDataBase.php');
 
+//Nettoyer les données tests de la table NW_stats
+include_once('clean_table_test.php');
+
 //Récupérer les données de la table receps
-$sql_receps = 'SELECT * FROM NW_receps';
+$sql_receps = "SELECT * FROM NW_receps";
 $recepsStatement = $mysqlClient->prepare($sql_receps);
 $recepsStatement->execute();
 $receps = $recepsStatement->fetchAll();
@@ -47,14 +50,23 @@ foreach ($receps as $recep) {
     $date = array_column($stats, 'date');
     if (!array_search($recep['date'], $date)) {
         /*Requête SQL pour insérer des données dans la table NW_stats*/
-        $sql_statsINSERT = 'INSERT INTO nw_stats(date, time_zone, recep_temp_average) VALUES (:date, :time_zone, :recep_temp_average);';
+        $sql_statsINSERT = 'INSERT INTO nw_stats(date, time_zone, recep_temp_average, recep_hum, recep_wind_direction, recep_wind_speed, 
+        recep_UV, recep_precipitation, recep_precipitation_speed)
+        VALUES (:date, :time_zone, :recep_temp_average, :recep_hum, :recep_wind_direction, :recep_wind_speed, 
+        :recep_UV, :recep_precipitation, :recep_precipitation_speed);';
         $insertStats = $mysqlClient->prepare($sql_statsINSERT);
 
         /*Avec les données de la table NW_recep de l'indexation de la variable $indexRechercheReceps*/
         $insertStats->execute([
             'date' => $recep["date"],
             'time_zone' => $recep["time_zone"],
-            'recep_temp_average' => $recep["recep_temp_average"]
+            'recep_temp_average' => $recep["recep_temp_average"],
+            'recep_hum' => $recep["recep_hum"],
+            'recep_wind_direction' => $recep["recep_wind_direction"],
+            'recep_wind_speed' => $recep["recep_wind_speed"],
+            'recep_UV' => $recep["recep_UV"],
+            'recep_precipitation' => $recep["recep_precipitation"],
+            'recep_precipitation_speed' => $recep["recep_precipitation_speed"]
         ]);
     }
 }

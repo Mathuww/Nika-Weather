@@ -28,5 +28,3 @@ VALUES (
         15
         /*(minimum : 10°, maximum : 20°)*/
     );
-
-;
