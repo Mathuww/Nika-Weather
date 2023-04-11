@@ -20,8 +20,7 @@ CREATE TABLE
         recep_wind_direction DECIMAL(4, 1),
         recep_wind_speed DECIMAL(4, 1),
         recep_UV DECIMAL(4, 1),
-        recep_precipitation DECIMAL(3, 1),
-        recep_precipition_speed DECIMAL(3, 1)
+        recep_pluviometer DECIMAL(3, 1)
     );
 
 CREATE TABLE
@@ -36,8 +35,7 @@ CREATE TABLE
         recep_wind_direction DECIMAL(4, 1),
         recep_wind_speed DECIMAL(3, 1),
         recep_UV DECIMAL(4, 1),
-        recep_precipitation DECIMAL(3, 1),
-        recep_precipition_speed DECIMAL(3, 1),
+        recep_pluviometer DECIMAL(3, 1),
         preview_temp_felt DECIMAL(4, 2),
         opti_temp VARCHAR(10)
     );
