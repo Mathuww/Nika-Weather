@@ -1,3 +1,5 @@
+-- Active: 1665825635924@@127.0.0.1@3306@nwv1
+
 DELETE FROM nw_receps;
 
 /*Les moyennes de températures à Le Bar Sur Loup sont arrondis à l'unité (!info : le 0.5 est arrondie à l'inférieur)*/
@@ -6,7 +8,6 @@ DELETE FROM nw_receps;
 
 INSERT INTO
     NW_receps (
-        id,
         date,
         time_zone,
         recep_temp_average,
@@ -17,7 +18,6 @@ INSERT INTO
         recep_pluviometer
     )
 VALUES (
-        1,
         '2023-04-10 00:00:00',
         '+01:00',
         9,
@@ -28,7 +28,6 @@ VALUES (
         0.78,
         0
     ), (
-        2,
         '2023-04-11 00:00:00',
         '+01:00',
         9,
@@ -39,7 +38,6 @@ VALUES (
         0.78,
         0
     ), (
-        3,
         '2023-04-12 00:00:00',
         '+01:00',
         10,
@@ -50,7 +48,6 @@ VALUES (
         0.78,
         0
     ), (
-        4,
         '2023-04-13 00:00:00',
         '+01:00',
         12,
@@ -61,7 +58,6 @@ VALUES (
         0.78,
         0
     ), (
-        5,
         '2023-04-14 00:00:00',
         '+01:00',
         15,

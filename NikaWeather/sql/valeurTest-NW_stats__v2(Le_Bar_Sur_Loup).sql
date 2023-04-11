@@ -6,7 +6,6 @@ DELETE FROM nw_stats;
 
 INSERT INTO
     NW_stats (
-        id,
         date,
         time_zone,
         recep_temp_average,
@@ -17,7 +16,6 @@ INSERT INTO
         recep_pluviometer
     )
 VALUES (
-        1,
         '2023-04-08 00:00:00',
         '+01:00',
         16,
@@ -28,7 +26,6 @@ VALUES (
         0.78,
         0
     ), (
-        2,
         '2023-04-09 00:00:00',
         '+01:00',
         12,
@@ -39,7 +36,6 @@ VALUES (
         0.78,
         0
     ), (
-        3,
         '2023-04-14 00:00:00',
         '+01:00',
         15,

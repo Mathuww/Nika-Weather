@@ -1,3 +1,5 @@
+-- Active: 1665825635924@@127.0.0.1@3306@nwv1
+
 /*Au cas où pour tout rénitialiser*/
 
 DROP TABLE NW_recep;
@@ -12,8 +14,7 @@ DROP TABLE NW_stats;
 
 CREATE TABLE
     NW_receps (
-        id INTEGER PRIMARY KEY AUTO_INCREMENT,
-        date DATETIME,
+        date DATETIME PRIMARY KEY NOT NULL,
         time_zone VARCHAR(6),
         recep_temp_average DECIMAL(4, 2),
         recep_hum DECIMAL(3, 1),
@@ -25,8 +26,7 @@ CREATE TABLE
 
 CREATE TABLE
     NW_stats (
-        id INTEGER PRIMARY KEY AUTO_INCREMENT,
-        date DATETIME,
+        date DATETIME PRIMARY KEY NOT NULL,
         time_zone VARCHAR(6),
         recep_temp_average DECIMAL(4, 2),
         recep_temp_min DECIMAL(4, 2),
