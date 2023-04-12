@@ -1,8 +1,12 @@
 <?php
+//Récupérer les données de receps qui existent déjà dans la table stats (pour éviter les doublons)
+include('get_stats!.php');
+
+
 //Ajoute les données de la table NW_recep à NW_stats si et seulement si ils ont des dates différentes
 foreach ($receps as $recep) {
-    $date = array_column($stats, 'date');
-    if (!array_search($recep['date'], $date)) {
+    $dateDoublon = array_column($existDates, 'date');
+    if (!array_search($recep['date'], $dateDoublon)) {
         /*Requête SQL pour insérer des données dans la table NW_stats*/
         $sql_statsINSERT = 'INSERT INTO nw_stats(date, time_zone, recep_temp_average, recep_hum, recep_wind_direction, recep_wind_speed, 
         recep_UV, recep_pluviometer)
