@@ -54,3 +54,8 @@ foreach ($stats as $stat) {
         echo "C'était le " . $stat["date"] . " avec une température s'approchant des " . $stat["recep_temp_average"] . "°C." ?></p>
 <?php
 }
+
+
+echo "<br>";
+echo "___________________________________________________________________________________________" . "<br>";
+echo "<br>";
