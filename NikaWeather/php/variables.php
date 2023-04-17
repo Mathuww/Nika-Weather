@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['input_mode'])) {
-    $back_mode = $_GET['input_mode'];
+    $back_mode = "light";
 } else {
-    $back_mode = "Light Mode";
+    $back_mode = "dark";
 }
