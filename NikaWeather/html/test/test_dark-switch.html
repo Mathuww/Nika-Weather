@@ -20,15 +20,15 @@
         </div>
         <style>
           :root {
-  --white: white;
-  --black: #28292c;
+  --backlight: white;
+  --backdark: #121212;
   --dark: #84D2F6;
   --light:#FEC601;
 
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--backdark);
 }
 
 .toggle-switch {
@@ -62,7 +62,7 @@ input {
 }
 
 input:checked ~ .slider {
-  background-color: var(--white);
+  background-color: var(--backlight);
 }
 
 .slider::before {
@@ -73,7 +73,7 @@ input:checked ~ .slider {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  box-shadow: inset 5.6px -0.8px 0px 0px var(--white);
+  box-shadow: inset 5.6px -0.8px 0px 0px var(--backlight);
   background-color: var(--dark);
   transition: 0.3s;
 }

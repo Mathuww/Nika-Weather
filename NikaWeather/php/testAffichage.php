@@ -22,7 +22,7 @@ foreach ($receps as $recep) {
 
 
 echo "<br>";
-echo "___________________________________________________________________________________________" . "<br>";
+echo "____________________________________" . "<br>";
 echo "<br>";
 
 
@@ -39,12 +39,12 @@ foreach ($stats as $stat) {
 
 
 echo "<br>";
-echo "___________________________________________________________________________________________" . "<br>";
+echo "____________________________________" . "<br>";
 echo "<br>";
 
 
 //Transferer les données qui diffèrent de receps à stats
-include_once('transfer_receps_to_stats-v2.php');
+include_once('transfert_receps_to_stats-v2.php');
 
 
 //Afficher les données de la table stats
@@ -57,5 +57,5 @@ foreach ($stats as $stat) {
 
 
 echo "<br>";
-echo "___________________________________________________________________________________________" . "<br>";
+echo "____________________________________" . "<br>";
 echo "<br>";
