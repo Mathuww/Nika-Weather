@@ -22,7 +22,7 @@ label {
     cursor: pointer;
 }
 
-input {
+.input_mode {
     position: absolute;
     display: none;
 }

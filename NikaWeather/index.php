@@ -11,6 +11,10 @@
     <section>
         <h1>Bienvenue dans le nouveau site métérologique du lycée</h1>
         <h3>et merci de nous avoir fait confiance</h3>
+        <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>" method="get" id="form_date">
+            <input type="date" value="2023-04-18">
+            <input type="time" >
+        </form> </br>
     </section>
     <section id="weather-3D">
         <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.297/build/spline-viewer.js"></script>
