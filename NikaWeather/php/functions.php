@@ -9,10 +9,10 @@ function connectDataBase() :PDO
     return $db;
 }
 
-function get_newDateReceps(PDO $dbMySQL) :array
+function get_newReceps(PDO $dbMySQL) :array
 {
     //Récupérer les données de receps qui existent déjà dans la table stats (pour éviter les doublons)
-    $sql_exist = "SELECT nw_stats.date FROM nw_receps JOIN nw_stats ON nw_receps.date = nw_stats.date;";
+    $sql_exist = "SELECT * FROM nw_receps r WHERE r.date NOT IN (SELECT s.date FROM nw_stats s );";
     $existStatement = $dbMySQL->prepare($sql_exist);
     $existStatement->execute();
     return $existStatement->fetchAll();
@@ -64,36 +64,34 @@ function insert_newStats (PDO $dbMySQL)
 
 function transfert_recepsToStats (PDO $dbMySQL)
 {
-    //Récupérer les données de la table receps
-    $receps = get_totalReceps($dbMySQL);
-
     //Récupérer les données de receps qui existent déjà dans la table stats (pour éviter les doublons)
-    $existDates = get_newDateReceps($dbMySQL);
+    $receps = get_newReceps($dbMySQL);
+
+    // echo "<pre>";
+    // print_r($receps);
+    // echo "</pre>";
 
     //Ajoute les données de la table NW_recep à NW_stats si et seulement si ils ont des dates différentes
     foreach ($receps as $recep) {
-        $dateDoublon = array_column($existDates, 'date');
-        if (!array_search($recep['date'], $dateDoublon)) {
-            /*Requête SQL pour insérer des données dans la table NW_stats*/
-            $sql_statsINSERT = 'INSERT INTO nw_stats(date, time_zone, localization, recep_temp_average, recep_hum, 
-            recep_wind_direction, recep_wind_speed, recep_precipitation, recep_precipitation_speed, recep_pressure)
-            VALUES (:date, :time_zone, :localization, :recep_temp_average, :recep_hum, 
-            :recep_wind_direction, :recep_wind_speed, :recep_precipitation, :recep_precipitation_speed, :recep_pressure);';
-            $insertStats = $dbMySQL->prepare($sql_statsINSERT);
+        /*Requête SQL pour insérer des données dans la table NW_stats*/
+        $sql_statsINSERT = 'INSERT INTO nw_stats(date, time_zone, localization, recep_temp_average, recep_hum, 
+        recep_wind_direction, recep_wind_speed, recep_precipitation, recep_precipitation_speed, recep_pressure)
+        VALUES (:date, :time_zone, :localization, :recep_temp_average, :recep_hum, 
+        :recep_wind_direction, :recep_wind_speed, :recep_precipitation, :recep_precipitation_speed, :recep_pressure);';
+        $insertStats = $dbMySQL->prepare($sql_statsINSERT);
 
-            /*Avec les données de la table NW_recep de l'indexation de la variable $indexRechercheReceps*/
-            $insertStats->execute([
-                'date' => $recep["date"],
-                'time_zone' => $recep["time_zone"],
-                'localization' => $recep["localization"],
-                'recep_temp_average' => $recep["recep_temp_average"],
-                'recep_hum' => $recep["recep_hum"],
-                'recep_wind_direction' => $recep["recep_wind_direction"],
-                'recep_wind_speed' => $recep["recep_wind_speed"],
-                'recep_precipitation' => $recep["recep_precipitation"],
-                'recep_precipitation_speed' => $recep["recep_precipitation_speed"],
-                'recep_pressure' => $recep["recep_pressure"]
-            ]);
+        /*Avec les données de la table NW_recep de l'indexation de la variable $indexRechercheReceps*/
+        $insertStats->execute([
+            'date' => $recep["date"],
+            'time_zone' => $recep["time_zone"],
+            'localization' => $recep["localization"],
+            'recep_temp_average' => $recep["recep_temp_average"],
+            'recep_hum' => $recep["recep_hum"],
+            'recep_wind_direction' => $recep["recep_wind_direction"],
+            'recep_wind_speed' => $recep["recep_wind_speed"],
+            'recep_precipitation' => $recep["recep_precipitation"],
+            'recep_precipitation_speed' => $recep["recep_precipitation_speed"],
+            'recep_pressure' => $recep["recep_pressure"]
+        ]);
         }
     }
-}
