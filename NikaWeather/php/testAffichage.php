@@ -24,6 +24,7 @@ echo "<br>";
 //Récupérer les données stats sans y modifier
 $stats = get_totalStats($dbNW);
 
+
 //Afficher les données de la table stats
 foreach ($stats as $stat) {
 ?>
@@ -39,7 +40,7 @@ echo "<br>";
 
 
 //Transferer les données qui diffèrent de receps à stats
-transfert_recepsToStats($dbNW);
+transfert_recepsToStats($dbNW, $zenithTocquevilleSunrise, $zenithTocquevilleSunset);
 $stats = get_totalStats($dbNW);
 
 
@@ -55,3 +56,5 @@ foreach ($stats as $stat) {
 echo "<br>";
 echo "____________________________________" . "<br>";
 echo "<br>";
+
+include_once (dirname(__DIR__).'/archive/test_Sunrise-Sunset.php');

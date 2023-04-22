@@ -12,3 +12,17 @@ WHERE r.date NOT IN (
         SELECT s.date
         FROM nw_stats s
     );
+
+SELECT ST_Y(localization) FROM nw_receps;
+
+SELECT
+    TIMEDIFF(
+        NOW(),
+        CONVERT_TZ(
+            NOW(),
+            @@session.time_zone,
+            '+00:00'
+        )
+    );
+
+SET time_zone = "+02:00";
