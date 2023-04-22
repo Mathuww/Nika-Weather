@@ -12,17 +12,21 @@ DROP TABLE NW_receps;
 
 DROP TABLE NW_stats;
 
+DROP TABLE NW_optiTemps;
+
+DROP TABLE NW_admin;
+
 CREATE TABLE
     NW_receps (
         date DATETIME PRIMARY KEY NOT NULL,
         time_zone VARCHAR(6),
-        localisation POINT,
+        localization POINT,
         recep_temp_average DECIMAL(4, 2),
         recep_hum DECIMAL(3, 1),
         recep_wind_direction DECIMAL(4, 1),
         recep_wind_speed DECIMAL(4, 1),
         recep_precipitation DECIMAL(3, 1),
-        recep_precipitation_speed DECIMAL (4, 1),
+        recep_precipitation_speed DECIMAL(4, 1),
         recep_pressure DECIMAL (5, 1)
     );
 
@@ -30,18 +34,33 @@ CREATE TABLE
     NW_stats (
         date DATETIME PRIMARY KEY NOT NULL,
         time_zone VARCHAR(6),
-        localisation POINT,
+        localization POINT,
         recep_temp_average DECIMAL(4, 2),
         recep_hum DECIMAL(3, 1),
         recep_wind_direction DECIMAL(4, 1),
         recep_wind_speed DECIMAL(4, 1),
         recep_precipitation DECIMAL(3, 1),
-        recep_precipitation_speed DECIMAL (4, 1),
-        recep_pressure DECIMAL (5, 1),
+        recep_precipitation_speed DECIMAL(4, 1),
+        recep_pressure DECIMAL(5, 1),
         stat_temp_felt DECIMAL(4, 2),
-        stat_temp_min DECIMAL (4, 2),
-        stat_temp_max DECIMAL (4, 2),
+        stat_temp_min DECIMAL(4, 2),
+        stat_temp_max DECIMAL(4, 2),
         stat_sunrise TIME,
         stat_sunset TIME,
-        stat_time opti_temp VARCHAR(10)
+        optiTemps_id DECIMAL(2, 0),
+        FOREIGN KEY (optiTemps_id) REFERENCES NW_optiTemps (id)
+    );
+
+CREATE TABLE
+    NW_optiTemps (
+        id DECIMAL(2, 0) PRIMARY KEY,
+        duration VARCHAR(12)
+    );
+
+CREATE TABLE
+    NW_admin (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        username VARCHAR(32),
+        password VARCHAR(128),
+        cookies BOOLEAN
     );
