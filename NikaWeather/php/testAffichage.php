@@ -1,15 +1,10 @@
 <?php
-//Se connecter à la base de donnée nwv1
-include_once('_connexionDataBase.php');
-
-
 //Nettoyer les données tests de la table NW_stats
-include_once('clean_table_test.php');
+insert_newStats($dbNW);
 
 
 //Récupérer les données receps sans y modifier (tentative de tri)
-include('get_receps.php');
-//include('get_receps!.php');
+$receps = get_totalReceps($dbNW);
 
 
 //Afficher les données de la table receps
@@ -27,7 +22,7 @@ echo "<br>";
 
 
 //Récupérer les données stats sans y modifier
-include('get_stats.php');
+$stats = get_totalStats($dbNW);
 
 //Afficher les données de la table stats
 foreach ($stats as $stat) {
@@ -44,7 +39,8 @@ echo "<br>";
 
 
 //Transferer les données qui diffèrent de receps à stats
-include_once('transfert_receps_to_stats-v2.php');
+transfert_recepsToStats($dbNW);
+$stats = get_totalStats($dbNW);
 
 
 //Afficher les données de la table stats

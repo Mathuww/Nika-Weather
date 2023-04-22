@@ -1,4 +1,8 @@
-<?php include_once('./php/variables.php'); ?>
+<?php 
+include_once('./php/variables.php');
+include_once('./php/functions.php');
+$dbNW = connectDataBase();
+?>
 
 <!DOCTYPE html>
 
