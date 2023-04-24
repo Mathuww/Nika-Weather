@@ -34,3 +34,8 @@ function get_sunset (string $date, float $latitude, float $longitude, string $jt
     
     return $sunset;
 }
+
+function get_feelsLike ()
+{
+    return NULL;
+}

@@ -80,9 +80,9 @@ function transfert_recepsToStats (PDO $dbMySQL)
             'recep_precipitation' => $recep["recep_precipitation"],
             'recep_precipitation_speed' => $recep["recep_precipitation_speed"],
             'recep_pressure' => $recep["recep_pressure"],
-            'stat_temp_feelsLike' => NULL,
+            'stat_temp_feelsLike' => get_feelsLike(),
             'stat_sunrise' => get_sunrise($recep["date"], $recep["ST_X(r.localization)"], $recep["ST_Y(r.localization)"], $recep["time_zone"]),
             'stat_sunset' => get_sunset($recep["date"], $recep["ST_X(r.localization)"], $recep["ST_Y(r.localization)"], $recep["time_zone"])
         ]);
-        }
     }
+}
