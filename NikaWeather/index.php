@@ -27,15 +27,12 @@ $dbNW = connectDataBase();
         <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.297/build/spline-viewer.js"></script>
         <spline-viewer hint loading-anim url="https://prod.spline.design/qx8QwirUOYRwWWVx/scene.splinecode"></spline-viewer>
     </section>
-    <!-- <section>
-        <br />
-        <br />
-        <h2>Test de transfert de données</h2>
+    <section class="test">
         <?php
         //Incluire le test
         include_once('./php/testAffichage.php');
         ?>
-    </section> -->
+    </section>
     <?php include_once('./html/othersMobile.html'); ?>
     <?php include_once('./php/mode-back.php'); ?>
 </body>
