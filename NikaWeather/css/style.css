@@ -1,8 +1,47 @@
 :root {
-    --dark: #84D2F6;
     --light:#FEC601;
+    --dark: #4ABDF2;
+    --white: #D9D9D9;
+    --black: #121212;
+    --lightBackground: #FBFFB1;
+    --darkBackground: #130F2E;
+}
+
+.light body {
+    background-color: var(--lightBackground);
+}
+
+.dark body {
+    background-color: var(--darkBackground);
 }
 
 #weather-3D {
     height: 500px;
+}
+
+.othersMobile {
+    display: none;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+}
+
+.othersMobile .othersMobile__heading {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.othersMobile .othersMobile__solutions {
+    margin-top:0;
+    font-weight: 500;
+}
+
+@media (min-width: 500px) {
+    .othersMobile {
+        display: block;
+    }
+
+    .test {
+        display:none;
+    }
+
 }

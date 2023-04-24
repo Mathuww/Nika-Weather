@@ -16,13 +16,13 @@
 </footer>
 <style>
         <?php if ($back_mode == "light") : ?>
-        body {
-            background-color: white;
-            color : black;
+            body {
+                background-color: var(--lightBackground);
+                color: black;
             }
         <?php endif; ?><?php if ($back_mode == "dark") : ?>
             body {
-                background-color: #28292c;
+                background-color: var(--darkBackground);
                 color: white;
             }
         <?php endif; ?>

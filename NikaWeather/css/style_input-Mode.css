@@ -1,10 +1,3 @@
-:root {
-    --white: white;
-    --black: #28292c;
-    --dark: #4ABDF2;
-    --light:#FEC601;
-}
-
 .toggle-switch {
     left: 1%;
     position: relative;
@@ -36,7 +29,7 @@ label {
 }
 
 input:checked ~ .slider {
-    background-color: var(--white);
+    background-color: white;
 }
 
 .slider::before {
@@ -47,7 +40,7 @@ input:checked ~ .slider {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    box-shadow: inset 5.6px -0.8px 0px 0px var(--white);
+    box-shadow: inset 5.6px -0.8px 0px 0px white;
     background-color: var(--dark);
     transition: 0.3s;
 }
