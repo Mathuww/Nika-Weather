@@ -1,6 +1,9 @@
 <p>Voici mes nombreux tests pour obtenir l'heure de la fin de l'aurore (lever du soleil) et du début du crépuscule (coucher du soleil)</p>
 <?php
 
+$zenithTocquevilleSunrise = 90.25;
+$zenithTocquevilleSunset = 90.6;
+
 echo "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" . "<br>";
 echo "<br>";
 

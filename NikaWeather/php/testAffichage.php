@@ -41,7 +41,7 @@ echo "<br>";
 
 
 //Transferer les données qui diffèrent de receps à stats
-transfert_recepsToStats($dbNW, $zenithTocquevilleSunrise, $zenithTocquevilleSunset);
+transfert_recepsToStats($dbNW);
 $stats = get_totalStats($dbNW);
 
 

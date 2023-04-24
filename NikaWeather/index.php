@@ -1,6 +1,8 @@
-<?php 
-include_once('./php/variables.php');
-include_once('./php/functions.php');
+<?php
+include_once('./php/src/functionsTest.php');
+include_once('./php/src/variables.php');
+include_once('./php/src/Calculs-functions.php');
+include_once('./php/src/WithSQL-functions.php');
 $dbNW = connectDataBase();
 ?>
 
