@@ -42,7 +42,7 @@ CREATE TABLE
         recep_precipitation DECIMAL(3, 1),
         recep_precipitation_speed DECIMAL(4, 1),
         recep_pressure DECIMAL(5, 1),
-        stat_temp_felt DECIMAL(4, 2),
+        stat_temp_feelsLike DECIMAL(4, 2),
         stat_temp_min DECIMAL(4, 2),
         stat_temp_max DECIMAL(4, 2),
         stat_sunrise TIME,

@@ -1,6 +1,6 @@
 <?php
 //Nettoyer les données tests de la table NW_stats
-insert_newStats($dbNW);
+insertTest_newStats($dbNW);
 
 
 //Récupérer les données receps sans y modifier (tentative de tri)
@@ -29,7 +29,8 @@ $stats = get_totalStats($dbNW);
 foreach ($stats as $stat) {
 ?>
     <p><?php
-        echo "C'était le " . $stat["date"] . " avec une température s'approchant des " . $stat["recep_temp_average"] . "°C." ?></p>
+        echo "C'était le " . $stat["date"] . " avec une température s'approchant des " . $stat["recep_temp_average"] . "°C. 
+        À ce jour, l'aurore se terminait à " . $stat["stat_sunrise"] . ", puis débutait le crépuscule à " . $stat["stat_sunset"] . "." ?></p>
 <?php
 }
 
@@ -48,7 +49,8 @@ $stats = get_totalStats($dbNW);
 foreach ($stats as $stat) {
 ?>
     <p><?php
-        echo "C'était le " . $stat["date"] . " avec une température s'approchant des " . $stat["recep_temp_average"] . "°C." ?></p>
+        echo "C'était le " . $stat["date"] . " avec une température s'approchant des " . $stat["recep_temp_average"] . "°C.
+        À ce jour, l'aurore se terminait à " . $stat["stat_sunrise"] . ", puis débutait le crépuscule à " . $stat["stat_sunset"] . "."  ?></p>
 <?php
 }
 
@@ -57,4 +59,5 @@ echo "<br>";
 echo "____________________________________" . "<br>";
 echo "<br>";
 
-include_once (dirname(__DIR__).'/archive/test_Sunrise-Sunset.php');
+//Si vous voulez voir mes tests sur le lever/coucher du soleil (comment l'obtenir ?), veuillez enlever le commentaire ci-dessous.
+// include_once (dirname(__DIR__).'/archive/test_Sunrise-Sunset.php');
