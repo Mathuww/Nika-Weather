@@ -1,0 +1,99 @@
+.d1{
+    align-content: flex-end;
+    height: 50%;
+    width: 70%;
+    
+}
+.p1{
+    font-weight: bold;
+    align-content: flex-end;
+    font-size:  large;
+    color: brown;
+}
+
+.p2{
+    align-content: center;
+    font-size: small;
+}
+.p3{
+    align-content: center;
+    font-size: small;
+}
+.p4{
+    align-content: center;
+    font-size: small;
+}
+.p5{
+    align-content: center;
+    font-size: small;
+}
+.p6{
+    align-content: center;
+    font-size: small;
+}
+.p7{
+    align-content: center;
+    font-size: small;
+}
+.p8{
+    align-content: center;
+    font-size: small;
+}
+.p9{
+    align-content: center;
+    font-size: small;
+}
+.p10{
+    align-content: center;
+    font-size: small;
+}
+.p11{
+    align-content: center;
+    font-size: small;
+}
+.p12{
+    align-content: center;
+    font-size: small;
+}
+.p13{
+    align-content: center;
+    font-size: small;
+}
+.p14{
+    align-content: center;
+    font-size: small;
+}
+.p15{
+    align-content: center;
+    font-size: small;
+}
+.SAUVEGARDER{
+    margin-left: 580px;
+    border-radius: 19%;
+    border: solid black;
+    align-content: center;
+    background-color: yellow;
+}
+
+.p17{
+    font-size: small ;
+    text-decoration: none ;
+}
+.p18{
+    font-size: small;
+}
+.DECO{
+    border: solid blue;
+    background-color: aqua;
+    border-radius: 19%;
+    border-width: 10px;
+    text-decoration: none;
+    border-right: 10px;
+}
+
+body{
+    background-color: white;
+}
+section{
+    color: black;
+}
