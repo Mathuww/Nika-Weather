@@ -14,10 +14,10 @@ $dbNW = connectDataBase();
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_input-Mode.css">
     <?php if ($back_mode == "light") : ?>
-        <link rel="icon" type="image/png" href="ressources/icons/favicon(LIGHT).png">
+        <link rel="icon" type="image/png" href="resources/icons/favicon(LIGHT).png">
     <?php endif; ?>
     <?php if ($back_mode == "dark") : ?>
-        <link rel="icon" type="image/png" href="ressources/icons/favicon(DARK).png">
+        <link rel="icon" type="image/png" href="resources/icons/favicon(DARK).png">
     <?php endif; ?>
     <title>Accueil, Nika Wheather</title>
 
@@ -30,7 +30,7 @@ $dbNW = connectDataBase();
 
 <body>
     <?php include_once('./php/styleWithPHP.php');?>
-    <?php include_once('./html/othersMobile.html'); ?>
+    <?php include_once('./php/othersMobile.php'); ?>
     <header class="NW-header startMargin mobile">
         <div class="NW-header__titles">
             <h1 class="NW-header__titles--Primary zeroMargin">Votre lycée Tocqueville</h1>
@@ -53,15 +53,15 @@ $dbNW = connectDataBase();
             <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.304/build/spline-viewer.js"></script>
             <spline-viewer url="https://prod.spline.design/QlzNR6kt0IfdMUcV/scene.splinecode"></spline-viewer>
         </div>
-        <!-- <span class="NW-interface3D__temp">55°C</span> -->
     </section>
 
-    <section class="NW-quote startMargin mobile">
-        <p>Citation envisagée (conseil ou 2nd degré selon les données)</p>
+    <section class="NW-meta startMargin mobile">
+        <span class="NW-meta__temp">55°C</span>
+        <p class="NW-meta__quote">Citation envisagée (conseil ou 2nd degré selon les données)</p>
     </section>
 
-    <section class="NW-pannel">
-        <?php include_once('./php/buttonMode.php'); ?>
+    <section class="NW-pannel mobile">
+        <?php include('./php/buttonMode.php'); ?>
     </section>
 
     <!-- <section class="test">
