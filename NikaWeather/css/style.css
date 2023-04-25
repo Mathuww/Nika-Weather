@@ -4,6 +4,13 @@
 
 body {
     font-family: 'Epilogue', sans-serif;
+}
+
+.zeroMargin {
+    margin:0;
+}
+
+.startMargin {
     padding: 0 2%;
 }
 
@@ -29,7 +36,7 @@ order:0;
 color: var(--colorSoft);
 }
 
-.NW-header .NW-header__titles .NW-header__titles--Place {
+.NW-header .NW-header__titles .NW-header__titles--Primary {
     font-weight: 700;
     font-size: 16px;
 
@@ -37,7 +44,7 @@ color: var(--colorSoft);
     white-space:nowrap;
 }
 
-.NW-header .NW-header__titles .NW-header__titles--Now {
+.NW-header .NW-header__titles .NW-header__titles--Secondary {
     font-style: italic;
     font-weight: 300;
     font-size: 12px;
@@ -48,18 +55,18 @@ color: var(--colorSoft);
     order: 1;
 }
 
-.NW-header .settingsLink {
+.NW-header .NW-header__icon {
     width: 24px;
     height: 24px;
     order: 2;
 }
 
-.NW-header .settingsIcon {
+.NW-header .NW-header__icon .NW-header__icon--img {
     width: 24px;
     height: 100%;
 }
 
-.NW-header .logoIcon {
+.NW-header .NW-header__logo {
     width: 46px;
     height: 46px;
     order: 3;
@@ -67,10 +74,73 @@ color: var(--colorSoft);
 
 
 
-.weather-3D {
-    width : 92vw;
-    height: 92vw;
+.NW-interface3D {
+    width : 88vw;
+    height: 77vw;
+    /* background-color: red; */
 }
+
+.NW-interface3D .NW-interface3D__interaction{
+    padding: 0 6.25%;
+    width : 87.5%;
+    height : 100%;
+}
+
+.NW-interface3D .NW-interface3D__temp {
+    position: absolute;
+    width: 149px;
+    height: 98.26px;
+    top:20%;
+
+    font-weight: 600;
+    font-size: 95px;
+
+    background: linear-gradient(4.82deg, #FFC700 -17.48%, #FFFFFF 118.09%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+
+.NW-quote {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--colorSoft);
+}
+
+.NW-quote p {
+    margin:0;
+}
+
+
+
+.NW-pannel {
+    background-color: var(--colorPannel);
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 0px;
+    gap: 10px;
+
+    width: 100%;
+    top: 100%;
+
+    border-radius: 40px 40px 0px 0px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+
+
 
 
 

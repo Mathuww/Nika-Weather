@@ -14,10 +14,10 @@ $dbNW = connectDataBase();
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_input-Mode.css">
     <?php if ($back_mode == "light") : ?>
-        <link rel="icon" type="image/png" href="ressources/icons/favicon+(LIGHT).png">
+        <link rel="icon" type="image/png" href="ressources/icons/favicon(LIGHT).png">
     <?php endif; ?>
     <?php if ($back_mode == "dark") : ?>
-        <link rel="icon" type="image/png" href="ressources/icons/favicon+(DARK).png">
+        <link rel="icon" type="image/png" href="ressources/icons/favicon(DARK).png">
     <?php endif; ?>
     <title>Accueil, Nika Wheather</title>
 
@@ -30,35 +30,46 @@ $dbNW = connectDataBase();
 
 <body>
     <?php include_once('./php/styleWithPHP.php');?>
-    <header class="NW-header mobile">
+    <?php include_once('./html/othersMobile.html'); ?>
+    <header class="NW-header startMargin mobile">
         <div class="NW-header__titles">
-            <span class="NW-header__titles--Place">Votre lycée Tocqueville</span>
-            <span class="NW-header__titles--Now">Maintenant</span>
+            <h1 class="NW-header__titles--Primary zeroMargin">Votre lycée Tocqueville</h1>
+            <h2 class="NW-header__titles--Secondary zeroMargin">Maintenant</h2>
         </div>
         <span class="NW-header__space"></span>
         <!-- <div class="NW-header__icons"> -->
             <?php if ($back_mode == "light") : ?>
-                <a href="php/connect.php" class="settingsLink"><img src="ressources/icons/M_settings(LIGHT).png"  alt="Paramètres" class="settingsIcon"/></a>
-                <img src="ressources/icons/logo(LIGHT).png"  alt="Logo" class="logoIcon"/>
+                <a href="php/connect.php" class="NW-header__icon"><img src="resources/icons/M_settings(LIGHT).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
+                <img src="resources/icons/logo(LIGHT).png"  alt="Logo" class="NW-header__logo"/>
             <?php endif; ?><?php if ($back_mode == "dark") : ?>
-                <a href="php/connect.php" class="settingsLink"><img src="ressources/icons/M_settings(DARK).png"  alt="Paramètres" class="settingsIcon"/></a>
-                <img src="ressources/icons/logo(DARK).png"  alt="Logo" class="logoIcon"/>
+                <a href="php/connect.php" class="NW-header__icon"><img src="resources/icons/M_settings(DARK).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
+                <img src="resources/icons/logo(DARK).png"  alt="Logo" class="NW-header__logo"/>
             <?php endif; ?>
         <!-- </div> -->
     </header>
 
-    <section class="weather-3D mobile">
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.297/build/spline-viewer.js"></script>
-        <spline-viewer hint loading-anim url="https://prod.spline.design/qx8QwirUOYRwWWVx/scene.splinecode"></spline-viewer>
+    <section class="NW-interface3D startMargin mobile">
+        <div class="NW-interface3D__interaction">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.304/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/QlzNR6kt0IfdMUcV/scene.splinecode"></spline-viewer>
+        </div>
+        <!-- <span class="NW-interface3D__temp">55°C</span> -->
     </section>
-    <section class="test">
+
+    <section class="NW-quote startMargin mobile">
+        <p>Citation envisagée (conseil ou 2nd degré selon les données)</p>
+    </section>
+
+    <section class="NW-pannel">
+        <?php include_once('./php/buttonMode.php'); ?>
+    </section>
+
+    <!-- <section class="test">
         <?php
         //Incluire le test
         include_once('./php/testAffichage.php');
         ?>
-    </section>
-    <?php include_once('./html/othersMobile.html'); ?>
-    <?php include_once('./php/buttonMode.php'); ?>
+    </section> -->
 </body>
 
 </html>

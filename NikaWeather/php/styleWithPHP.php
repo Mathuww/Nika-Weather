@@ -3,6 +3,8 @@
             :root{
                 --color:#4ABDF2;
                 --colorSoft: #1BACEF;
+                --colorPannel : #F6FCFF;
+                --colorPannelText : #005982;
             }
             body {
                 background-color: #FBFFB1;
@@ -12,6 +14,8 @@
             :root{
                 --color:#FEC601;
                 --colorSoft: #FFE380;
+                --colorPannel : #121212;
+                --colorPannelText : white;
             }
 
             body {
