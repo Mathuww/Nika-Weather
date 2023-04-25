@@ -15,7 +15,7 @@
 <section class="othersMobileMin">
     <div class="othersMobileMin__heading">
         <p>Bonjour, monsieur, madame, <br/>vous êtes sur un site destiné à être visible. 
-        <br/>Comment voulez-vous lire paisiblement en dessous de 310 pixels ?!?. 
+        <br/>Comment voulez-vous lire paisiblement en dessous de 316 pixels ?!?. 
         <br/>Nan, mais je rigole. Par contre, pour l'instant, à l'heure du développement, presque aucun smartphone est en dessous de ce palier de pixels.
         <br/>Donc, je suis navré de vous annoncer que vous n'allez pas pouvoir utiliser vos petit de pixels :(.</p>
     </div>

@@ -222,7 +222,7 @@ color: var(--colorSoft);
     }
 }
 
-@media (max-width: 310px) {
+@media (max-width: 316px) {
     .othersMobileMin {
         display: inline-block;
     }
