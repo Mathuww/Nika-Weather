@@ -1,4 +1,4 @@
-<img src="./resources/miniatureGitHub.jpeg"  alt="miniature du projet" witdh=80%></img>
+<img src="./resources/miniatureGitHub.jpeg"  alt="miniature du projet" witdh=80%  style="text-align: center;"></img>
 
 Nika Weather est un projet de groupe, 
 proposé en Terminale dans un but d’informer les lycéens d’ Alexis de Tocqueville, 
