@@ -51,7 +51,7 @@ Ainsi, je vous propose de finir par la vidéo : la meilleure description convain
     <li>"php" ==> Le plus important, tous les fichiers PHP de transferts/récupération/gestion de MySQL, de variables et de fonctions utilisées dans le projet. ENSUITE, nous avons aussi toutes les pages fonctionnelles du projet.</li>
     <li>"sql" ==> Tous les requêtes effectuées pour tester la base de donnée MySQL.</li>
     <li>"ressources" ==> Les fichiers extras, nos shémas relationnels (MCD et MLD), nos icons (dark et light mode) et autres.</li>
-    <li>"index.php" ==> les variables (et normalement les cookies) a absolument établir au début.</li>
+    <li>"index.php" ==> les variables (et normalement les cookies) sont établies au début à cause de leur importance. Puis par la suite, on y trouve toutes les intégrations de fonctions et de page php/html.</li>
 </ul><br/>
 
 <h3>Les fonctionnalités disponibles pour le concours</h3>
@@ -68,8 +68,7 @@ avec l'attribut "stat_optiTemp" de la table "NW_stats" relié à la table "NW_op
 <h3>Les fonctionnalités futures (proches) sur le device mobile</h3>
 <ul>
     <li>Finir et adapter au front-ends les pages de la maquette mobile (accueil, info, archive, connection, paramètres).</li>
-    <li>Finir le back-end avec les cookies de compte administrateur et de mode de lecture (déjà tenté,
-    mais c'est tentative est pour l'instant un échec).</li>
+    <li>Finir le back-end avec les cookies de compte administrateur et de mode de lecture (déjà tenté, mais ces tentatives sont pour l'instant des échecs).</li>
     <li>Intégrer un système adaptif de conseils au 2nd degré selon nos données</li>
     <li>Bien intégrer les graphiques avec Chart.js</li>
     <li>Adapter chaque valeur, et modélisation 3D [cartoon et animé modélisé avec Blender (que Mathéo maîtrise) et adapté avec spline.design] sur chaque pages, en réussissant à connecter notre station météorologique avec le logiciel MQTT.</li>
