@@ -1,5 +1,5 @@
 <img src="./resources/miniatureGitHub.jpeg"  alt="miniature du projet" witdh=80%></img>
-
+<br/>
 Nika Weather est un projet de groupe, 
 proposé en Terminale dans un but d’informer les lycéens d’ Alexis de Tocqueville, 
 à Grasse, sur la météo où ils travaillent et de même, 
@@ -37,3 +37,42 @@ Ainsi, je vous propose de finir par la vidéo : la meilleure description convain
 
 <h3>Si tu as encore du temps, on peut mieux te convaincre en 2min :)</h3>
 <a href="https://www.youtube-nocookie.com/embed/S-pz9zdhvFw">Avec la vidéo de présentation</a>
+
+<br/><br/><br/><br/>
+<h2>Documentation technique</h2>
+
+<h3>Les dossiers et leurs utilités</h3>
+<ul>
+    <li>"ancienne archive" ==> les dossiers qu'on nous as donnée (et qui ne marchent pas aussi)</li>
+    <li>"archive" ==> Tous nos anciens fichiers importants qu'on garde au cas où</li>
+    <li>"css" ==> l'ensemble des styles qu'on a effectué, testé (ceux de Valentin sont dans un dossier spécialisé)</li>
+    <li>"html" ==> l'ensemble des tests et tentatives html effectué et bien sûr, ceux de Valentin sont dans un dossier spécialisé</li>
+    <li>"js" ==> l'ensemble des tests pour fonctionner le FrameWork "Chart.js"</li>
+    <li>"php" ==> Le plus important, tous les fichiers de transferts/récupération/gestion de MySQL, de variables, de fonctions utilisés dans le projet. ENSUITE, nous avons tous les pages fonctionnels du project.</li>
+    <li>"sql" ==> Tous les requêtes effectués pour tester la base de donnée MySQL.</li>
+    <li>"ressources" ==> Les fichiers extras, nos shémas relationnels (MCD et MLD), nos icons (dark et light mode) et autres.</li>
+</ul><br/>
+
+<h3>Les fonctionnalités disponibles pour le concours</h3>
+<ul>
+    <li>Vous avez la possibilité de voir à l'accueil, mes travaux de backends commencés sur les transferts de deux tables.
+    L'une sert à récolter les données brutes de la station météorologique et l'autre sert à faire le tri, de l'optimisation, et d'ajouter des fonctionnalités telles que le lever/coucher du soleil, la température min/max ou encore le ressentie.</li>
+    <li>Vous avez la possibilité de voir à l'accueil, mes travaux de backends commencés sur les transferts de deux tables.
+    L'une sert à récolter les données brutes de la station météorologique et l'autre sert à faire le tri, de l'optimisation, et d'ajouter des fonctionnalités telles que le lever/coucher du soleil, la température min/max ou encore le ressentie.</li>
+    <li>Vous avez la possibilité de changer de mode de lecture light/dark mode</li>
+    <li>Vous pourrez admirer le modèle graphique (à l'aide de l'intégration "Spline.design") non adapté pour l'instant à la page d'accueil</li>
+</ul>
+<em>Pour rappel, l'optimisation sera faite pour une raison simple, il y a énormément de donnée qui sont récoltées.
+Pour y rémédier, nous trierons à la minute le transfert ; puis après 24, à l'heure ; enfin, après un week-end, à des moments (matin/aprem/soir) 
+avec l'attribut de la deuxième table "stat_optiTemp" relié à la table "NW_optiTemps".</em><br/><br/>
+
+<h3>Les fonctionnalités futures (proches) sur le device mobile</h3>
+<ul>
+    <li>Finir et adapter au front-ends les pages de la maquette mobile (accueil, info, archive, connection, paramètres).</li>
+    <li>Finir le back-end avec les cookies de compte et de mode de lecture (déjà tenté, mais pas réussite).</li>
+    <li>Intégrer un système adaptif de conseils au 2nd degré selon nos données</li>
+    <li>Bien intégrer les graphiques avec Chart.js</li>
+    <li>Adapter chaque valeur, et modélisation 3D [cartoon et animé modélisé avec Blender (que Mathéo maîtrise) et adapté avec spline.design] sur chaque pages, en réussissant de connecter notre station météorologique avec le logiciel MQTT.</li>
+</ul>
+<em>Tout donnée mise du site sont soit des donnée test/statique ou des données d'avril 2022 prises 
+sur le site http://edumed.unice.fr/data-center/meteo/archive_meteo.php.</em><br/><br/>

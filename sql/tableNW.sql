@@ -1,5 +1,7 @@
 -- Active: 1665825635924@@127.0.0.1@3306@nwv1
 
+CREATE DATABASE nwv1;
+
 /*Au cas où pour tout rénitialiser*/
 
 DROP TABLE NW_recep;
