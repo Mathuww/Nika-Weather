@@ -1,5 +1,6 @@
-# Nika-Weather
-Nika Weather est un projet de  groupe, 
+<img src="./resources/miniatureGitHub.jpeg"  alt="miniature du projet" witdh=80%></img>
+
+Nika Weather est un projet de groupe, 
 proposé en Terminale dans un but d’informer les lycéens d’ Alexis de Tocqueville, 
 à Grasse, sur la météo où ils travaillent et de même, 
 de fournir un support pédagogique pour la matière de S.V.T.
@@ -34,5 +35,5 @@ une action exclusive aux administrateurs,
 Pour finir, la dernière page est bien sûr celle informatif sur laquelle vous êtes maintenant.
 Ainsi, je vous propose de finir par la vidéo : la meilleure description convaincante qu’on peut vous faire.
 
-<h3>Si tu as encore du temps, on peut mieux te convaincre en 2min :)</h3>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/S-pz9zdhvFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h3>Si tu as encore du temps, on peut mieux te convaincre en 2min :)</h3>
+<a href="https://www.youtube-nocookie.com/embed/S-pz9zdhvFw">Avec la vidéo de présentation</a>
