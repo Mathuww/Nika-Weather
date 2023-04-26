@@ -17,7 +17,7 @@
         <p>Bonjour, monsieur, madame, <br/>vous êtes sur un site destiné à être visible. 
         <br/>Comment voulez-vous lire paisiblement en dessous de 316 pixels ?!?. 
         <br/>Nan, mais je rigole. Par contre, pour l'instant, à l'heure du développement, presque aucun smartphone est en dessous de ce palier de pixels.
-        <br/>Donc, je suis navré de vous annoncer que vous n'allez pas pouvoir utiliser vos petit de pixels :(.</p>
+        <br/>Donc, je suis navré de vous annoncer que vous n'allez pas pouvoir utiliser vos petit pixels :(.</p>
     </div>
     <span>Par contre, je vous propose trois solutions :</span>
     <ul class="othersMobileMin__solutions">

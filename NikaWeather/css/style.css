@@ -4,6 +4,8 @@
 
 body {
     font-family: 'Epilogue', sans-serif;
+    margin: 0;
+    color: var(--colorText);
 }
 
 .zeroMargin {
@@ -11,17 +13,16 @@ body {
 }
 
 .startMargin {
-    padding: 0 2%;
+    padding: 0 4%;
 }
 
 .NW-header {
 display: flex;
 flex-direction: row;
 align-items: center;
-padding: 0px;
 gap: 2.5%;
 
-width: 100%;
+width: 92%;
 }
 
 .NW-header .NW-header__titles{
@@ -119,14 +120,14 @@ color: var(--colorSoft);
 .NW-pannel {
     background-color: var(--colorPannel);
     margin-top: 30px;
+    padding: 10px 3%;
+    padding-bottom: 10px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 20px 0px;
-    gap: 10px;
 
-    height: 1000px;
+    height: 100%;
 
     border-radius: 40px 40px 0px 0px;
 
@@ -137,6 +138,96 @@ color: var(--colorSoft);
     flex-grow: 0;
 }
 
+.NW-pannel {
+    background-color: var(--colorPannel);
+    padding-bottom: 20px 3%;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    height: 100%;
+
+    border-radius: 40px 40px 0px 0px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.NW-footer {
+    background-color: var(--colorPannel);
+    padding: 20px 3%;
+    height: 120px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    order: 8;
+
+    font-size: 12px;
+    font-style: italic;
+}
+
+.NW-footer__primaryInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    order: 0;
+    margin:0;
+    width: 100%;
+    height: 30px;
+}
+
+.NW-footer__primaryInfo--texte {
+    display: block;
+    font-weight: 400;
+    text-decoration-line: underline;
+    order:0;
+    margin:0;
+    width:100%;
+
+    text-decoration:  none;
+    color: var(--colorText);
+}
+
+.NW-footer__primaryInfo--iconMode {
+    margin: 2px 0;
+    padding-left: 4px; 
+    padding-right: 8px; 
+    width: 44px;
+}
+
+.NW-footer__secondaryInfo {
+    display: block;
+    font-weight: 400;
+    text-decoration-line: underline;
+    margin:0;
+
+    order: 1;
+    align-self: stretch;
+
+    text-decoration:  none;
+    color: var(--colorText);
+}
+
+.NW-footer__certif {
+    width: 100%;
+    font-weight: 200;
+    text-align: right;
+
+    order: 2;
+
+    text-decoration:  none;
+    color: var(--colorText);
+}
+
 
 
 
@@ -145,6 +236,7 @@ color: var(--colorSoft);
 .error {
     font-style: italic;
     font-weight: 900;
+    margin: 0 3%;
 }
 
 .error a {
@@ -157,6 +249,7 @@ color: var(--colorSoft);
     display: none;
     font-family: 'Epilogue', sans-serif;
     font-weight: 400;
+    margin: 0 2%;
 }
 
 .othersMobileMax .othersMobileMax__heading {
@@ -175,6 +268,7 @@ color: var(--colorSoft);
     font-weight: 200;
     font-style: italic;
     font-size: 12px;
+    margin: 0 2%;
 }
 
 .othersMobileMin .othersMobileMin__solutions {

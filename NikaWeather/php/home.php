@@ -53,15 +53,21 @@
     </section>
 
     <section class="NW-pannel mobile">
-        <?php include('./php/buttonMode.php'); ?>
-    </section>
-
-    <!-- <section class="test">
         <?php
         //Incluire le test
-        include_once('./php/testAffichage.php');
-        ?>
-    </section> -->
+        include_once('./php/testAffichage.php');?>
+    </section>
+    <footer class="NW-footer mobile">
+        <div class="NW-footer__primaryInfo">
+            <a href="./php/connect.php" class="NW-footer__primaryInfo--texte">Connexion pour les administrateurs <br/>(bénéficiant de leurs préférences d’affichages)</a>
+            <div class="NW-footer__primaryInfo--iconMode">
+                <?php include('./php/buttonMode.php');?>
+            </div>
+        </div>
+        <a href="./php/info.php" class="NW-footer__secondaryInfo">
+            Pour plus d’information sur le projet terminale concours Nika Weather, <br/>veuillez accéder à cette page.</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="NW-footer__certif">Tout droit réservé à Nika’Weather®</a>
+    </footer>
 </body>
 
 </html>
