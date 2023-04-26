@@ -1,4 +1,4 @@
-<img src="./resources/miniatureGitHub.jpeg"  alt="miniature du projet" witdh=80%></img>
+<img src="./resources/miniature.jpeg"  alt="miniature du projet" witdh=80%></img>
 <br/>
 Nika Weather est un projet de groupe, 
 proposé en Terminale dans un but d’informer les lycéens d’ Alexis de Tocqueville, 
@@ -43,15 +43,15 @@ Ainsi, je vous propose de finir par la vidéo : la meilleure description convain
 
 <h3>Les dossiers et leurs utilités</h3>
 <ul>
-    <li>"ancienne archive" ==> les dossiers qu'on nous as donnée (et qui ne marchent pas aussi).</li>
-    <li>"archive" ==> Tous nos anciens fichiers importants qu'on garde au cas où.</li>
-    <li>"css" ==> l'ensemble des styles CSS qu'on a effectué, testé (ceux de Valentin sont dans un dossier spécialisé).</li>
-    <li>"html" ==> l'ensemble des tests et tentatives HTML effectué et bien sûr, ceux de Valentin sont dans un dossier spécialisé.</li>
-    <li>"js" ==> l'ensemble des tests JavaScript pour faire fonctionner le FrameWork "Chart.js"</li>
-    <li>"php" ==> Le plus important, tous les fichiers PHP de transferts/récupération/gestion de MySQL, de variables et de fonctions utilisées dans le projet. ENSUITE, nous avons aussi toutes les pages fonctionnelles du projet.</li>
-    <li>"sql" ==> Tous les requêtes effectuées pour tester la base de donnée MySQL.</li>
-    <li>"ressources" ==> Les fichiers extras, nos shémas relationnels (MCD et MLD), nos icons (dark et light mode) et autres.</li>
-    <li>"index.php" ==> les variables (et normalement les cookies) sont établies au début à cause de leur importance. Puis par la suite, on y trouve toutes les intégrations de fonctions et de page php/html.</li>
+    <li>`ancienne archive` ==> les dossiers qu'on nous as donnée (et qui ne marchent pas aussi).</li>
+    <li>`archive` ==> Tous nos anciens fichiers importants qu'on garde au cas où.</li>
+    <li>`css` ==> l'ensemble des styles CSS qu'on a effectué, testé (ceux de Valentin sont dans un dossier spécialisé).</li>
+    <li>`html` ==> l'ensemble des tests et tentatives HTML effectué et bien sûr, ceux de Valentin sont dans un dossier spécialisé.</li>
+    <li>`js` ==> l'ensemble des tests JavaScript pour faire fonctionner le FrameWork "Chart.js"</li>
+    <li>`php` ==> Le plus important, tous les fichiers PHP de transferts/récupération/gestion de MySQL, de variables et de fonctions utilisées dans le projet. ENSUITE, nous avons aussi toutes les pages fonctionnelles du projet.</li>
+    <li>`sql` ==> Tous les requêtes effectuées pour tester la base de donnée MySQL.</li>
+    <li>`ressources` ==> Les fichiers extras, nos shémas relationnels (MCD et MLD), nos icons (dark et light mode) et autres.</li>
+    <li>`index.php` ==> les variables (et normalement les cookies) sont établies au début à cause de leur importance. Puis par la suite, on y trouve toutes les intégrations de fonctions et de page php/html.</li>
 </ul><br/>
 
 <h3>Les fonctionnalités disponibles pour le concours</h3>
