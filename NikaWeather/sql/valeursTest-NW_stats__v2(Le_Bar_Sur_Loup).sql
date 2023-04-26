@@ -2,12 +2,9 @@ DELETE FROM nw_stats;
 
 /*Les moyennes de températures sont arrondis à l'unité (!info : le 0.5 est arrondie à l'inférieur)*/
 
-/* IL FAUT ABSOLUMENT PRENDRE LE TEMPS À METTRE BONNES LES DONNÉES*/
-
 INSERT INTO
     NW_stats (
         date,
-        time_zone,
         localization,
         recep_temp_average,
         recep_hum,
@@ -22,7 +19,6 @@ INSERT INTO
     )
 VALUES (
         '2022-04-05 00:00:00',
-        '+02:00',
         POINT(43.6535, 6.94082),
         9.53,
         62.23,
@@ -36,7 +32,6 @@ VALUES (
         5
     ), (
         '2022-04-06 00:00:00',
-        '+02:00',
         POINT(43.6535, 6.94082),
         9.40,
         72.02,
@@ -50,7 +45,6 @@ VALUES (
         5
     ), (
         '2022-04-07 00:00:00',
-        '+02:00',
         POINT(43.6535, 6.94082),
         13.32,
         64.28,
@@ -64,7 +58,6 @@ VALUES (
         5
     ), (
         '2022-04-10 00:00:00',
-        '+02:00',
         POINT(43.6535, 6.94082),
         10.96,
         36.27,

@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Europe/Paris");
-include_once("php/src/functionCookie.php");
+include_once("/functionCookie.php");
 
 //ça marche pas mes cookies avec mon bouton, je suis extrêmement déçu
 //Je voulais ajouter des cookies tout en utilisant mon bouton, 
@@ -24,12 +24,3 @@ if (isset($_GET['input_mode'])) {
 } else {
     $back_mode = "dark";
 }
-
-// $zenithTocquevilleSunrise = 90.25;
-// $zenithTocquevilleSunset = 90.6;
-
-include_once('./php/src/functionsTest.php');
-include_once('./php/src/Calculs-functions.php');
-include_once('./php/src/WithSQL-functions.php');
-$dbNW = connectDataBase();
-include_once("php/home.php");

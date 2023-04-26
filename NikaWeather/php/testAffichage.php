@@ -1,4 +1,4 @@
-<section class="testAffichage mobile">
+<section class="testAffichage">
     <h2>Test de transfert de données</h2>
     <?php
     //Nettoyer les données tests de la table NW_stats

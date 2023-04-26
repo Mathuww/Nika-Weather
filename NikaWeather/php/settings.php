@@ -1,11 +1,9 @@
-<?php
-include_once('./src/variables.php');
-?>
+<?php include_once('./src/variablesSecondary.php'); ?>
 
 <!DOCTYPE html>
 
 <head>
-<?php include_once(dirname(__DIR__).'/html/header.html'); ?>
+<?php include_once('./header.php'); ?>
     <title>Préférences admin, Nika Wheather</title>
 </head>
 

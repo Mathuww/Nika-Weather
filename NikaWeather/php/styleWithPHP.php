@@ -3,6 +3,7 @@
             :root{
                 --color:#4ABDF2;
                 --colorSoft: #1BACEF;
+                --colorDegrade : linear-gradient(4.82deg, #4ABDF2 -17.48%, #FFFFFF 118.09%);
                 --colorPannel : #F6FCFF;
                 --colorPannelText : #005982;
             }
@@ -14,6 +15,7 @@
             :root{
                 --color:#FEC601;
                 --colorSoft: #FFE380;
+                --colorDegrade : linear-gradient(4.82deg, #FFC700 -17.48%, #FFFFFF 118.09%);
                 --colorPannel : #121212;
                 --colorPannelText : white;
             }

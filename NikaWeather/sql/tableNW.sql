@@ -19,7 +19,6 @@ DROP TABLE NW_admin;
 CREATE TABLE
     NW_receps (
         date DATETIME PRIMARY KEY NOT NULL,
-        time_zone VARCHAR(6),
         localization POINT,
         recep_temp_average DECIMAL(4, 2),
         recep_hum DECIMAL(3, 1),
@@ -30,10 +29,11 @@ CREATE TABLE
         recep_pressure DECIMAL (5, 1)
     );
 
+/*J'ai choisi d'ajouter les données de lever/coucher du soleil parce que la précision du résultat est meilleur le jour même.*/
+
 CREATE TABLE
     NW_stats (
         date DATETIME PRIMARY KEY NOT NULL,
-        time_zone VARCHAR(6),
         localization POINT,
         recep_temp_average DECIMAL(4, 2),
         recep_hum DECIMAL(3, 1),

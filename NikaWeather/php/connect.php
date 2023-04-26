@@ -1,12 +1,12 @@
 <?php
-include_once('./src/variables.php');
+include_once('./src/variablesSecondary.php');
 ?>
 
 <!DOCTYPE html>
 
 <head>
-<?php include_once(dirname(__DIR__).'/html/header.html'); ?>
-    <title>Se connecter, Nika Wheather</title>
+<?php include_once('./header.php'); ?>
+<title>Se connecter, Nika Wheather</title>
 </head>
 
 <body>
