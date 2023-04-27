@@ -59,7 +59,8 @@ Ainsi, je vous propose de finir par la vidéo : la meilleure description convain
     <li>Vous avez la possibilité de voir à l'accueil, mes travaux de backends commencés sur les transferts de deux tables relationnelles.
     L'une (NW_receps) sert à récolter les données brutes de la station météorologique et l'autre (NW_stats) sert à faire le tri, de l'optimisation, et d'ajouter des fonctionnalitées telles que le lever/coucher du soleil, la température min/max ou encore le ressenti (température).</li>
     <li>Vous avez la possibilité de changer le mode de lecture (light/dark mode).</li>
-    <li>Vous pourrez admirer le modèle graphique (à l'aide de l'intégration "spline.design") non adapté pour l'instant à la page d'accueil</li>
+    <li>Vous pourrez admirer le modèle graphique (à l'aide de l'intégration "spline.design") non adapté pour l'instant à la page d'accueil.</li>
+    <li>Un avertissement pour prévenir l’utilisateur du device adapté aux projets (entre 316 à 500 pixels de largeur).</li>
 </ul>
 <em>Pour rappel, l'optimisation sera faite pour une raison simple, il y a eu énormément de données qui ont seront récoltées.
 Pour y remédier, nous trierons à la minute le transfert ; puis après 24h, nous trierons les données sur chaque heure ; enfin, après un week-end, nous trierons les données à trois moments précis (matin/aprem/soir) 
