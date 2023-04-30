@@ -1,4 +1,7 @@
-<?php include_once('./src/variablesSecondary.php'); ?>
+<?php
+include_once('src/variables.php');
+?>
+
 
 <!DOCTYPE html>
 
@@ -9,9 +12,11 @@
 
 <body>
     <?php include_once('styleWithPHP.php');?>
-    <?php include_once('./othersMobile.php'); ?>
+    <?php include_once('othersMobile.php'); ?>
     <section class="error mobile">
         <a href="../index.php"><p>Erreur 404</p></a>
     </section>
-    <?php include_once('buttonMode.php'); ?>
+    <div class="mobile">
+        <?php include('buttonMode.php'); ?>
+    </div>
 </body>

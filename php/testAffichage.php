@@ -1,6 +1,6 @@
 <article class="testAffichage">
     <h2>Test de transfert de données</h2>
-    <h4>Première table (données récoltées directement de la station météo, et supprimées 24h après) : "NW_receps"</h4>
+    <h4>Première table (données récoltées brutes de la station météo, et supprimées 24h après) : "NW_receps"</h4>
     <?php
     //Nettoyer les données tests de la table NW_stats
     insertTest_newStats($dbNW);

@@ -1,15 +1,16 @@
+<?php include_once("src/variables.php"); ?>
 <!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_input-Mode.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_input-Mode.css">
     <?php if ($back_mode == "light") : ?>
-        <link rel="icon" type="image/png" href="resources/icons/favicon(LIGHT).png">
+        <link rel="icon" type="image/png" href="../resources/icons/favicon(LIGHT).png">
     <?php endif; ?>
     <?php if ($back_mode == "dark") : ?>
-        <link rel="icon" type="image/png" href="resources/icons/favicon(DARK).png">
+        <link rel="icon" type="image/png" href="../resources/icons/favicon(DARK).png">
     <?php endif; ?>
     <title>Accueil, Nika Wheather</title>
 
@@ -21,8 +22,8 @@
 
 
 <body>
-    <?php include_once('./php/styleWithPHP.php');?>
-    <?php include_once('./php/othersMobile.php'); ?>
+    <?php include_once('styleWithPHP.php');?>
+    <?php include_once('othersMobile.php'); ?>
     <header class="NW-header startMargin mobile">
         <div class="NW-header__titles">
             <h1 class="NW-header__titles--Primary zeroMargin">Votre lycée Tocqueville</h1>
@@ -31,11 +32,11 @@
         <span class="NW-header__space"></span>
         <!-- <div class="NW-header__icons"> -->
             <?php if ($back_mode == "light") : ?>
-                <a href="php/connect.php" class="NW-header__icon"><img src="resources/icons/M_settings(LIGHT).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
-                <img src="resources/icons/logo(LIGHT).png"  alt="Logo" class="NW-header__logo"/>
+                <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(LIGHT).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
+                <img src="../resources/icons/logo(LIGHT).png"  alt="Logo" class="NW-header__logo"/>
             <?php endif; ?><?php if ($back_mode == "dark") : ?>
-                <a href="php/connect.php" class="NW-header__icon"><img src="resources/icons/M_settings(DARK).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
-                <img src="resources/icons/logo(DARK).png"  alt="Logo" class="NW-header__logo"/>
+                <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(DARK).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
+                <img src="../resources/icons/logo(DARK).png"  alt="Logo" class="NW-header__logo"/>
             <?php endif; ?>
         <!-- </div> -->
     </header>
@@ -55,16 +56,16 @@
     <section class="NW-pannel mobile">
         <?php
         //Incluire le test
-        include_once('./php/testAffichage.php');?>
+        include_once('testAffichage.php');?>
     </section>
     <footer class="NW-footer mobile">
         <div class="NW-footer__primaryInfo">
-            <a href="./php/connect.php" class="NW-footer__primaryInfo--texte">Connexion pour les administrateurs <br/>(bénéficiant de leurs préférences d’affichages)</a>
+            <a href="connect.php" class="NW-footer__primaryInfo--texte">Connexion pour les administrateurs <br/>(bénéficiant de leurs préférences d’affichages)</a>
             <div class="NW-footer__primaryInfo--iconMode">
-                <?php include('./php/buttonMode.php');?>
+                <?php include('buttonMode.php');?>
             </div>
         </div>
-        <a href="./php/info.php" class="NW-footer__secondaryInfo">
+        <a href="info.php" class="NW-footer__secondaryInfo">
             Pour plus d’information sur le projet terminale concours Nika Weather, <br/>veuillez accéder à cette page.</a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="NW-footer__certif">Tout droit réservé à Nika’Weather®</a>
     </footer>

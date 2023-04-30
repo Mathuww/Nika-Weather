@@ -9,7 +9,7 @@
         <li>L'autre pour les flemmards, <strong>utilisez la touche <kbd>F12</kbd></strong> en choisissant le device que vous admirez,</li>
         <li>Enfin la solution radicale, <strong>prenez votre smartphone</strong> puis profitez au maximum de ce splendide site.</li>
     </ul>
-    <?php include_once('./php/buttonMode.php'); ?>
+    <?php include('buttonMode.php'); ?>
 </section>
 
 <section class="othersMobileMin">
@@ -25,5 +25,7 @@
         <li>L'autre pour les flemmards, <strong>utilisez la touche <kbd>F12</kbd></strong> en choisissant le device que vous admirez,</li>
         <li>Enfin la solution radicale, <strong>prenez votre smartphone</strong> puis profitez au maximum de ce splendide site.</li>
     </ul>
-    <?php include_once('./php/buttonMode.php'); ?>
+    <div class="mobile">
+        <?php include('buttonMode.php'); ?>
+    </div>
 </section>
