@@ -19,14 +19,20 @@ if (isset($_GET['input_mode']))
     if($_GET['input_mode'] == True)
     {
         $_SESSION["DL-USER"] = "light";
+        modeCookie("light");
     }
     elseif ($_SESSION["DL-USER"] == "light" && $_GET['input_mode'] == False)
     {
         $_SESSION["DL-USER"] = "dark";
+        modeCookie("dark");
     }
+} elseif (isset($_COOKIE["MODE_USER"]))
+{
+    $_SESSION["DL-USER"] = $_COOKIE["MODE_USER"];
 }
 elseif (!isset($_SESSION["DL-USER"])) {
     $_SESSION["DL-USER"] = "dark";
+    modeCookie("dark");
 }
 
 include_once('functionsTest.php');
