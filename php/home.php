@@ -2,16 +2,7 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style_input-Mode.css">
-    <?php if ($back_mode == "light") : ?>
-        <link rel="icon" type="image/png" href="../resources/icons/favicon(LIGHT).png">
-    <?php endif; ?>
-    <?php if ($back_mode == "dark") : ?>
-        <link rel="icon" type="image/png" href="../resources/icons/favicon(DARK).png">
-    <?php endif; ?>
+    <?php include_once('./header.php'); ?>
     <title>Accueil, Nika Wheather</title>
 
     <!-- Intégration de la police "Epilogue" -->
@@ -31,10 +22,10 @@
         </div>
         <span class="NW-header__space"></span>
         <!-- <div class="NW-header__icons"> -->
-            <?php if ($back_mode == "light") : ?>
+            <?php if ($_SESSION["DL-USER"] == "light") : ?>
                 <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(LIGHT).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
                 <img src="../resources/icons/logo(LIGHT).png"  alt="Logo" class="NW-header__logo"/>
-            <?php endif; ?><?php if ($back_mode == "dark") : ?>
+            <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
                 <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(DARK).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
                 <img src="../resources/icons/logo(DARK).png"  alt="Logo" class="NW-header__logo"/>
             <?php endif; ?>

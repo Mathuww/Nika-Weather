@@ -1,5 +1,5 @@
 <style>
-        <?php if ($back_mode == "light") : ?>
+        <?php if ($_SESSION["DL-USER"] == "light") : ?>
             :root{
                 --colorText : black;
                 --color:#4ABDF2;
@@ -11,7 +11,7 @@
             body {
                 background-color: #FBFFB1;
             }
-        <?php endif; ?><?php if ($back_mode == "dark") : ?>
+        <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
             :root{
                 --colorText : white;
                 --color:#FEC601;

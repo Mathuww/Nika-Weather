@@ -2,10 +2,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/style_input-Mode.css">
-<?php if ($back_mode == "light") : ?>
+<?php if ($_SESSION["DL-USER"] == "light") : ?>
     <link rel="icon" type="image/png" href="../resources/icons/favicon(LIGHT).png">
 <?php endif; ?>
-<?php if ($back_mode == "dark") : ?>
+<?php if ($_SESSION["DL-USER"] == "dark") : ?>
     <link rel="icon" type="image/png" href="../resources/icons/favicon(DARK).png">
 <?php endif; ?>
 
