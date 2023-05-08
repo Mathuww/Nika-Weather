@@ -39,3 +39,7 @@ include_once('functionsTest.php');
 include_once('Calculs-functions.php');
 include_once('WithSQL-functions.php');
 $dbNW = connectDataBase();
+
+//Initialisation des premières valeurs de stats
+$statsWaiting = getStatsLastRecent($dbNW);
+

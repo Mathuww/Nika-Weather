@@ -1,4 +1,4 @@
-<?php include_once("src/variables.php"); ?>
+<?php include_once("variables_functions/variables.php"); ?>
 <!DOCTYPE html>
 
 <head>
@@ -13,7 +13,7 @@
 
 
 <body>
-    <?php include_once('styleWithPHP.php');?>
+    <?php include_once('styleWithPHP.php'); ?>
     <?php include_once('othersMobile.php'); ?>
     <header class="NW-header startMargin mobile">
         <div class="NW-header__titles">
@@ -22,13 +22,13 @@
         </div>
         <span class="NW-header__space"></span>
         <!-- <div class="NW-header__icons"> -->
-            <?php if ($_SESSION["DL-USER"] == "light") : ?>
-                <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(LIGHT).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
-                <img src="../resources/icons/logo(LIGHT).png"  alt="Logo" class="NW-header__logo"/>
+        <?php if ($_SESSION["DL-USER"] == "light") : ?>
+            <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(LIGHT).png" alt="Paramètres" class="NW-header__icon--img" /></a>
+            <img src="../resources/icons/logo(LIGHT).png" alt="Logo" class="NW-header__logo" />
             <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
-                <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(DARK).png"  alt="Paramètres" class="NW-header__icon--img"/></a>
-                <img src="../resources/icons/logo(DARK).png"  alt="Logo" class="NW-header__logo"/>
-            <?php endif; ?>
+            <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(DARK).png" alt="Paramètres" class="NW-header__icon--img" /></a>
+            <img src="../resources/icons/logo(DARK).png" alt="Logo" class="NW-header__logo" />
+        <?php endif; ?>
         <!-- </div> -->
     </header>
 
@@ -40,24 +40,26 @@
     </section>
 
     <section class="NW-meta startMargin mobile">
-        <span class="NW-meta__temp">55°C</span>
+        <span class="NW-meta__temp">
+            <?php echo round($statsWaiting["recep_temp_average"], 1, PHP_ROUND_HALF_UP)?>
+        </span>
         <p class="NW-meta__quote">Citation envisagée (conseil ou 2nd degré selon les données)</p>
     </section>
 
     <section class="NW-pannel mobile">
         <?php
         //Incluire le test
-        include_once('testAffichage.php');?>
+        include_once('testAffichage.php'); ?>
     </section>
     <footer class="NW-footer mobile">
         <div class="NW-footer__primaryInfo">
-            <a href="connect.php" class="NW-footer__primaryInfo--texte">Connexion pour les administrateurs <br/>(bénéficiant de leurs préférences d’affichages)</a>
+            <a href="connect.php" class="NW-footer__primaryInfo--texte">Connexion pour les administrateurs <br />(bénéficiant de leurs préférences d’affichages)</a>
             <div class="NW-footer__primaryInfo--iconMode">
-                <?php include('buttonMode.php');?>
+                <?php include('buttonMode.php'); ?>
             </div>
         </div>
         <a href="info.php" class="NW-footer__secondaryInfo">
-            Pour plus d’information sur le projet terminale concours Nika Weather, <br/>veuillez accéder à cette page.</a>
+            Pour plus d’information sur le projet terminale concours Nika Weather, <br />veuillez accéder à cette page.</a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="NW-footer__certif">Tout droit réservé à Nika’Weather®</a>
     </footer>
 </body>

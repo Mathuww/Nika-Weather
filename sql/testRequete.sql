@@ -1,4 +1,4 @@
--- Active: 1665825635924@@127.0.0.1@3306@nwv1
+-- Active: 1683009167113@@127.0.0.1@3306@nwv1
 
 SELECT date, t.duration
 FROM nw_stats s

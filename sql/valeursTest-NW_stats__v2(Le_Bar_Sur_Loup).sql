@@ -1,3 +1,5 @@
+-- Active: 1683009167113@@127.0.0.1@3306@nwv1
+
 DELETE FROM nw_stats;
 
 /*Les moyennes de températures sont arrondis à l'unité (!info : le 0.5 est arrondie à l'inférieur)*/

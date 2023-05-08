@@ -1,22 +1,24 @@
--- Active: 1665825635924@@127.0.0.1@3306@nwv1
+-- Active: 1683009167113@@127.0.0.1@3306@nwv1
 
-CREATE DATABASE nwv1;
+-- DROP TABLE IF EXISTS nwv1;
+
+CREATE DATABASE IF NOT EXISTS nwv1;
 
 /*Au cas où pour tout rénitialiser*/
 
-DROP TABLE NW_recep;
+-- DROP TABLE IF EXISTS NW_recep;
 
-DROP TABLE NW_stat;
+-- DROP TABLE IF EXISTS NW_stat;
 
-/*Effacer les deux tables*/
+-- /*Effacer les deux tables*/
 
-DROP TABLE NW_receps;
+-- DROP TABLE IF EXISTS NW_receps;
 
-DROP TABLE NW_stats;
+-- DROP TABLE IF EXISTS NW_stats;
 
-DROP TABLE NW_optiTemps;
+-- DROP TABLE IF EXISTS NW_optiTemps;
 
-DROP TABLE NW_admin;
+-- DROP TABLE IF EXISTS NW_admin;
 
 CREATE TABLE
     NW_receps (
