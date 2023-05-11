@@ -31,26 +31,47 @@
         <?php endif; ?>
         <!-- </div> -->
     </header>
+    <main>
 
-    <section class="NW-interface3D startMargin mobile">
-        <div class="NW-interface3D__interaction">
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.304/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/QlzNR6kt0IfdMUcV/scene.splinecode"></spline-viewer>
-        </div>
-    </section>
+        <section class="NW-interface3D startMargin mobile">
+            <div class="NW-interface3D__interaction">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.304/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/QlzNR6kt0IfdMUcV/scene.splinecode"></spline-viewer>
+            </div>
+        </section>
 
-    <section class="NW-meta startMargin mobile">
-        <span class="NW-meta__temp">
-            <?php echo round($statsWaiting["recep_temp_average"], 1, PHP_ROUND_HALF_UP)?>
-        </span>
-        <p class="NW-meta__quote">Citation envisagée (conseil ou 2nd degré selon les données)</p>
-    </section>
+        <section class="NW-meta startMargin mobile">
+            <span class="NW-meta__temp">
+                <?php echo round($LastStats["recep_temp_average"], 1, PHP_ROUND_HALF_UP) ?>
+            </span>
+            <p class="NW-meta__quote">Citation envisagée (conseil ou 2nd degré selon les données)</p>
+        </section>
 
-    <section class="NW-pannel mobile">
-        <?php
-        //Incluire le test
-        include_once('testAffichage.php'); ?>
-    </section>
+        <section class="NW-pannel mobile">
+            <p>Le <?php echo $LastStats["date"];?>,</p>
+            <!-- <?php
+            //Incluire le test
+            //include_once('../archive/testAffichage.php'); 
+            ?> -->
+            <p>Ressenti : <?php 
+                if (isset($LastStats["stat_temp_feelsLike"]))
+                {
+                    echo $LastStats["stat_temp_feelsLike"];
+                } else {
+                    echo "NULL";
+                }?></p>
+            <p>Température : <?php echo $LastStats["recep_temp_average"];?>°C</p>
+            <p>Humidité : <?php echo $LastStats["recep_hum"];?>%</p>
+            <p>Direction du vent : <?php echo $LastStats["recep_wind_direction"];?>°</p>
+            <p>Vitesse du vent : <?php echo $LastStats["recep_wind_speed"];?> km/h</p>
+            <p>Précipitation : <?php echo $LastStats["recep_precipitation"];?> mm</p>
+            <p>Vitesse de précipitation : <?php echo $LastStats["recep_precipitation_speed"];?> km/h</p>
+            <p>Pression atmosphérique : <?php echo $LastStats["recep_pressure"];?> hPa</p>
+            <p>Aurore (la fin) : <?php echo $LastStats["stat_sunrise"];?> h</p>
+            <p>Crépuscule (la début) : <?php echo $LastStats["stat_sunset"];?> h</p>
+        </section>
+    </main>
+
     <footer class="NW-footer mobile">
         <div class="NW-footer__primaryInfo">
             <a href="connect.php" class="NW-footer__primaryInfo--texte">Connexion pour les administrateurs <br />(bénéficiant de leurs préférences d’affichages)</a>

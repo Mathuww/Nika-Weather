@@ -14,23 +14,17 @@ include_once("functionCookie.php");
 // $now = date("d/m/Y H:i:s", time());
 // echo $now;
 
-if (isset($_GET['input_mode']))
-{
-    if($_GET['input_mode'] == True)
-    {
+if (isset($_GET['input_mode'])) {
+    if ($_GET['input_mode'] == True) {
         $_SESSION["DL-USER"] = "light";
         modeCookie("light");
-    }
-    elseif ($_SESSION["DL-USER"] == "light" && $_GET['input_mode'] == False)
-    {
+    } elseif ($_SESSION["DL-USER"] == "light" && $_GET['input_mode'] == False) {
         $_SESSION["DL-USER"] = "dark";
         modeCookie("dark");
     }
-} elseif (isset($_COOKIE["MODE_USER"]))
-{
+} elseif (isset($_COOKIE["MODE_USER"])) {
     $_SESSION["DL-USER"] = $_COOKIE["MODE_USER"];
-}
-elseif (!isset($_SESSION["DL-USER"])) {
+} elseif (!isset($_SESSION["DL-USER"])) {
     $_SESSION["DL-USER"] = "dark";
     modeCookie("dark");
 }
@@ -39,7 +33,7 @@ include_once('functionsTest.php');
 include_once('Calculs-functions.php');
 include_once('WithSQL-functions.php');
 $dbNW = connectDataBase();
+$allStats = get_totalStats($dbNW);
 
 //Initialisation des premières valeurs de stats
-$statsWaiting = getStatsLastRecent($dbNW);
-
+$LastStats = getStatsLastRecent($dbNW);

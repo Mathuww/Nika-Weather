@@ -1,5 +1,5 @@
 <?php
-function connectDataBase() :PDO
+function connectDataBase(): PDO
 {
     try {
         $db =  new PDO('mysql:host=localhost;dbname=nwv1;charset=utf8', 'root', 'root');
@@ -9,7 +9,7 @@ function connectDataBase() :PDO
     return $db;
 }
 
-function get_newReceps(PDO $dbMySQL) :array
+function get_newReceps(PDO $dbMySQL): array
 {
     //Récupérer les données de receps qui existent déjà dans la table stats (pour éviter les doublons)
     $sql_exist = "SELECT r.date, r.localization, ST_X(r.localization), ST_Y(r.localization), r.recep_temp_average, r.recep_hum, 
@@ -22,7 +22,7 @@ function get_newReceps(PDO $dbMySQL) :array
     return $existStatement->fetchAll();
 }
 
-function get_totalReceps (PDO $dbMySQL) :array
+function get_totalReceps(PDO $dbMySQL): array
 {
     //Récupérer les données de la table receps
     $sql_receps = "SELECT * FROM NW_receps";
@@ -31,17 +31,16 @@ function get_totalReceps (PDO $dbMySQL) :array
     return $recepsStatement->fetchAll();
 }
 
-function get_totalStats (PDO $dbMySQL) :array
+function get_totalStats(PDO $dbMySQL): array
 {
     //Récupérer les données de la table stats
     $sql_stats = 'SELECT * FROM nw_stats';
     $statsStatement = $dbMySQL->prepare($sql_stats);
     $statsStatement->execute();
     return $statsStatement->fetchAll();
-
 }
 
-function delete_totalStats (PDO $dbMySQL)
+function delete_totalStats(PDO $dbMySQL)
 {
     //Supprimer les données de la table NW_stats
     $sql_deleteStats = "DELETE FROM nw_stats;";
@@ -49,7 +48,7 @@ function delete_totalStats (PDO $dbMySQL)
     $deleteStatsStatement->execute();
 }
 
-function transfert_recepsToStats (PDO $dbMySQL)
+function transfert_recepsToStats(PDO $dbMySQL)
 {
     //Récupérer les données de receps qui existent déjà dans la table stats (pour éviter les doublons)
     $receps = get_newReceps($dbMySQL);
@@ -85,7 +84,13 @@ function transfert_recepsToStats (PDO $dbMySQL)
     }
 }
 
-function getStatsLastRecent (PDO $dbMySQL) :array
+function updateData(PDO $dbMySQL): array
+{
+    transfert_recepsToStats($dbMySQL);
+    return get_totalReceps($dbMySQL);
+}
+
+function getStatsLastRecent(PDO $dbMySQL): array
 {
     //Récupérer les données de la table stats
     // $sql_statsRecent = 'SELECT sA.* FROM nw_stats sA WHERE sA.date in (
