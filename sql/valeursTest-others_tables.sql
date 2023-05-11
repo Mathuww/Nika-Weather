@@ -9,10 +9,23 @@ INSERT INTO
 VALUES (1, "quarter hour"), (2, "half hour"), (3, "hour"), (4, "moment"), (5, "day"), (6, "week"), (7, "month"), (8, "year");
 
 INSERT INTO
-    NW_admin (id, username, password, cookies)
+    NW_admin (username, password, cookies)
 VALUES (
-        1,
         "Mathuww",
         "tune sauras jamais monmotdepasse",
         true
+    );
+
+INSERT INTO
+    NW_settings (
+        name,
+        value,
+        lastDate_Modification,
+        lastUser_Modification
+    )
+VALUES (
+        "Accès public aux archives de données météorologiques",
+        False,
+        '2023-05-11 20:02:02',
+        "Mathuww"
     );

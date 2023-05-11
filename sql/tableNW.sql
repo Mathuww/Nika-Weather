@@ -20,6 +20,8 @@ CREATE DATABASE IF NOT EXISTS nwv1;
 
 -- DROP TABLE IF EXISTS NW_admin;
 
+-- DROP TABLE IF EXISTS NW_settings;
+
 CREATE TABLE
     NW_receps (
         date DATETIME PRIMARY KEY NOT NULL,
@@ -63,8 +65,16 @@ CREATE TABLE
 
 CREATE TABLE
     NW_admin (
-        id INT PRIMARY KEY AUTO_INCREMENT,
-        username VARCHAR(32),
+        username VARCHAR(32) PRIMARY KEY,
         password VARCHAR(128),
         cookies BOOLEAN
+    );
+
+CREATE TABLE
+    NW_settings (
+        name VARCHAR(128) PRIMARY KEY,
+        value BOOLEAN,
+        lastDate_Modification DATETIME,
+        lastUser_Modification VARCHAR(32),
+        FOREIGN KEY (lastUser_Modification) REFERENCES NW_admin(username)
     );
