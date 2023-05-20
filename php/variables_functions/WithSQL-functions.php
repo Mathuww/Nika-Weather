@@ -1,8 +1,14 @@
 <?php
-function connectDataBase(): PDO
+function connectDataBase(string $server): PDO
 {
     try {
-        $db =  new PDO('mysql:host=localhost;dbname=nwv1;charset=utf8', 'root', 'root');
+        if ($server == "uwamp") {
+            $db =  new PDO('mysql:host=localhost;dbname=nwv1;charset=utf8', 'root', 'root');
+        } elseif ($server == 'wamp') {
+            $db =  new PDO('mysql:host=localhost;dbname=nwv1;charset=utf8', 'root', '');
+        } else {
+            die('Erreur : Mal configuration de la variable $typeServer');
+        }
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
     }

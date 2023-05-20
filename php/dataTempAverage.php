@@ -14,7 +14,7 @@ include_once('variables_functions/variables.php');
     <?php include_once('styleWithPHP.php'); ?>
     <?php include_once('othersMobile.php'); ?>
     <section class="error mobile">
-        <a href="../index.php">
+        <a href="index.php">
             <p>Erreur 404</p>
         </a>
     </section>
