@@ -19,11 +19,13 @@ VALUES (
 INSERT INTO
     NW_settings (
         name,
+        content,
         value,
         lastDate_Modification,
         lastUser_Modification
     )
 VALUES (
+        "activ_archive",
         "Accès public aux archives de données météorologiques",
         False,
         '2023-05-11 20:02:02',

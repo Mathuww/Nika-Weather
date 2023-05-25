@@ -18,7 +18,7 @@ CREATE DATABASE IF NOT EXISTS nwv1;
 
 -- DROP TABLE IF EXISTS NW_optiTemps;
 
--- DROP TABLE IF EXISTS NW_admin;
+DROP TABLE IF EXISTS NW_admin;
 
 -- DROP TABLE IF EXISTS NW_settings;
 
@@ -66,14 +66,15 @@ CREATE TABLE
 CREATE TABLE
     NW_admin (
         username VARCHAR(32) PRIMARY KEY,
-        password VARCHAR(128),
+        password VARBINARY(128),
         cookies BOOLEAN
     );
 
 CREATE TABLE
     NW_settings (
-        name VARCHAR(128) PRIMARY KEY,
+        name VARCHAR(32) PRIMARY KEY,
         value BOOLEAN,
+        content VARCHAR(256),
         lastDate_Modification DATETIME,
         lastUser_Modification VARCHAR(32),
         FOREIGN KEY (lastUser_Modification) REFERENCES NW_admin(username)
