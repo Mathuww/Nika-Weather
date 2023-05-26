@@ -1,4 +1,4 @@
--- Active: 1683757039173@@127.0.0.1@3306@nwv1
+-- Active: 1684319228248@@127.0.0.1@3306@nwv1
 
 -- DROP TABLE IF EXISTS nwv1;
 
@@ -66,7 +66,7 @@ CREATE TABLE
 CREATE TABLE
     NW_admin (
         username VARCHAR(32) PRIMARY KEY,
-        password VARBINARY(128),
+        password VARBINARY(72),
         cookies BOOLEAN
     );
 

@@ -15,8 +15,6 @@
             <h1 class="NW-header__titles--Primary zeroMargin title">Votre lycée Tocqueville</h1>
             <h2 class="NW-header__titles--Secondary zeroMargin subtitle">Maintenant</h2>
         </div>
-        <span class="NW-header__space"></span>
-        <!-- <div class="NW-header__icons"> -->
         <?php if ($_SESSION["DL-USER"] == "light") : ?>
             <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(LIGHT).png" alt="Icon Paramètres" class="NW-header__icon--img" /></a>
             <img src="../resources/icons/logo(LIGHT).png" alt="Icon Logo" class="NW-header__logo" />

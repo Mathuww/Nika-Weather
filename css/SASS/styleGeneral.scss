@@ -1,6 +1,65 @@
+#form_mode {
+    .toggle-switch {
+        left: 1%;
+        position: relative;
+        width: 40px;
+    }
+    
+    label {
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        background-color: #4ABDF2;
+        border : 2px;
+        border-radius: 10px;
+        border-style: inset;
+        cursor: pointer;
+    }
+    
+    .input_mode {
+        position: absolute;
+        display: none;
+    }
+    
+    .slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    
+    input:checked ~ .slider {
+        background-color: white;
+    }
+    
+    .slider::before {
+        content: "";
+        position: absolute;
+        top: 2.6px;
+        left: 3.2px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: inset 5.6px -0.8px 0px 0px white;
+        background-color: #4ABDF2;
+        transition: 0.3s;
+    }
+    
+    input:checked ~ .slider::before {
+        transform: translateX(19px);
+        background-color: #FEC601;
+        box-shadow: none;
+    }
+}
+
+
+
 #weather-3D {
     height: 500px;
 }
+
+
 
 body {
     font-family: 'Epilogue', sans-serif;
@@ -59,12 +118,9 @@ body {
         // }
     }
 
-    .NW-header__space {
-        width: 100%;
-        order: 1;
-    }
-
     .NW-header__icon {
+        margin-left: auto;
+
         width: 24px;
         height: 24px;
         order: 2;
@@ -139,8 +195,6 @@ body {
     height: 100%;
 
     border-radius: 40px 40px 0px 0px;
-
-    /* Inside auto layout */
 
     flex: none;
     order: 2;
@@ -277,17 +331,19 @@ body {
 
 
 
+
+
 .NW-pannelBodyPage {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 20px 0px;
+    padding: 25px 25px 0px;
     gap: 12px;
 
     width: auto;
 
-    background: #121212;
+    background: var(--colorPannel);
     border-radius: 40px 40px 0px 0px;
 
     .NW-header {
@@ -296,6 +352,10 @@ body {
         padding: 0px;
         justify-content: space-between;
         width: 100%;
+
+        .NW-header__titles {
+            color: var(--colorText);
+        }
 
         .NW-header__logo {
         // margin-left: auto;
@@ -307,7 +367,61 @@ body {
             }
         }
     }
+
+    .connect-Space {
+        width:100%;
+    
+        .connect-Space_advert {
+            text-align: center;
+            margin-top: 24px;
+            color: var(--colorSoft);
+        }
+    
+        #connect-Space_form {    
+            width: 100%;
+            height: auto;
+    
+            .box-connect {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 20px;
+                gap: 2px;
+    
+                width: 100%;
+                height: auto;
+            }
+    
+            input {
+                width: 94%;
+            }
+    
+            label {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 12px;
+            }
+    
+            .connect-Space_form-id {
+                order: 0;
+            }
+        }
+    }
+
+    .NW-footer {
+        margin: 0;
+        padding: 0;
+        margin-top: 26px;
+    }
 }
+
+
+
+
+
+
+
+
 
 
 

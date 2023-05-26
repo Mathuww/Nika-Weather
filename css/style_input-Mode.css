@@ -1,10 +1,10 @@
-.toggle-switch {
+#form_mode .toggle-switch {
     left: 1%;
     position: relative;
     width: 40px;
 }
 
-label {
+#form_mode label {
     position: absolute;
     width: 100%;
     height: 20px;
@@ -15,12 +15,12 @@ label {
     cursor: pointer;
 }
 
-.input_mode {
+#form_mode .input_mode {
     position: absolute;
     display: none;
 }
 
-.slider {
+#form_mode .slider {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -28,11 +28,11 @@ label {
     transition: 0.3s;
 }
 
-input:checked ~ .slider {
+#form_mode input:checked ~ .slider {
     background-color: white;
 }
 
-.slider::before {
+#form_mode .slider::before {
     content: "";
     position: absolute;
     top: 2.6px;
@@ -45,7 +45,7 @@ input:checked ~ .slider {
     transition: 0.3s;
 }
 
-input:checked ~ .slider::before {
+#form_mode input:checked ~ .slider::before {
     transform: translateX(19px);
     background-color: #FEC601;
     box-shadow: none;

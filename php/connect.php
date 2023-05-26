@@ -1,5 +1,11 @@
 <?php
 include_once('variables_functions/variables.php');
+$admins = getAdmin($dbNW);
+
+
+// echo '<pre>';
+// print_r($admins);
+// echo '</pre>';
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +35,31 @@ include_once('variables_functions/variables.php');
             <?php endif; ?>
             <!-- </div> -->
         </section>
+        <section class="connect-Space">
+            <p class="connect-Space_advert subtitle">Espace réservé aux administrateurs du projet</p>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>" id="connect-Space_form">
+                <div class="connect-Space_form-id box-connect">
+                    <label>IDENTIFIANT</label><br />
+                    <input for="connect-Space_form" name="input-adminID" type="text" autofocus required maxlength=32 minlength=4 tabindex=1 placeholder="ici, votre pseudo" autocomplete="nickname" />
+                </div>
+                <div class="connect-Space_form-password box-connect">
+                    <label>MOT DE PASSE</label><br />
+                    <input for="connect-Space_form" name="input-adminPassword" type="password" required minlength=8 maxlength=72 tabindex=2 autocomplete="current-password" />
+                </div>
+            </form>
+        </section>
 
-        <div class="mobile">
-            <?php include('buttonMode.php'); ?>
-        </div>
-    </main>
+        <footer class="NW-footer mobile">
+            <div class="NW-footer__primaryInfo">
+                <a href="index.php" class="NW-footer__primaryInfo--texte"><br />Revenir à l’accueil Nika Weather</a>
+                <div class="NW-footer__primaryInfo--iconMode">
+                    <?php include('buttonMode.php'); ?>
+                </div>
+            </div>
+            <a href="info.php" class="NW-footer__secondaryInfo">
+                Pour plus d’information sur le projet terminale concours Nika Weather, <br />veuillez accéder à cette page.</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="NW-footer__certif">Tout droit réservé à Nika’Weather®</a>
+        </footer>
+</body>
+</main>
 </body>
