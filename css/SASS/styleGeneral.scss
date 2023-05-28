@@ -489,6 +489,48 @@ body {
         }
     }
 
+    .NW-info {
+        .NW-info__intro {
+            margin-top: 0;
+            color: var(--colorSoft);
+        }
+
+        .NW-info__title {
+            margin-bottom: 5px;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .NW-info__paragraphe {
+            margin:0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+        }
+        .NW-info__paragraphe--multiligne {
+            margin-bottom: 8px;
+        }
+
+        .NW-info__video {
+            overflow:hidden; 
+            padding-bottom:56.25%; 
+            position:relative; 
+            height:0;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left:0;
+                right:0;
+                width: 98%;
+                height: 98%;
+
+            }
+            
+            margin-bottom: 40px;
+        }
+    }
+
     .NW-footer {
         padding: 0;
         margin-bottom: 0;

@@ -23,7 +23,6 @@
             <a href="connect.php" class="NW-header__icon"><img src="../resources/icons/M_settings(DARK).png" alt="Icon Paramètres" class="NW-header__icon--img" /></a>
             <img src="../resources/icons/logo(DARK).png" alt="Icon Logo" class="NW-header__logo" />
         <?php endif; ?>
-        <!-- </div> -->
     </header>
 
 <body>

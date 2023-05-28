@@ -1,5 +1,8 @@
 <?php
 include_once('variables_functions/variables.php');
+if ($_COOKIE["connected"] or $_SESSION["connected"]) {
+    header("Location: ./settings.php");
+}
 $admins = getAdmin($dbNW);
 $adminsID = array_column($admins, 'username');
 $adminsPassword = array_column($admins, 'password');
