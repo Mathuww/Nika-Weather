@@ -1,5 +1,6 @@
 <?php include_once("variables_functions/variables.php"); ?>
 <!DOCTYPE html>
+<html>
 
 <head>
     <?php include_once('./header.php'); ?>
@@ -25,7 +26,7 @@
         <!-- </div> -->
     </header>
 
-
+<body>
     <main>
         <section class="NW-interface3D startMargin mobile">
             <div class="NW-interface3D__interaction">

@@ -379,6 +379,12 @@ body {
   filter: brightness(0.7);
   transform: scale(0.98);
 }
+.NW-pannelBodyPage .connect-Space .connect-Space_aide {
+  text-align: right;
+  margin-top: 40px;
+  margin-right: 4%;
+  color: var(--colorSoft);
+}
 .NW-pannelBodyPage .NW-footer {
   padding: 0;
   margin-bottom: 0;

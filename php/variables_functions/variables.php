@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (!isset($_COOKIE["typeServer"])) {
-    $typeServer = "wamp";
+    $_SESSION["typeServer"] = "wamp";
 } else {
-    $typeServer = $_COOKIE["typeServer"];
+    $_SESSION["typeServer"] = $_COOKIE["typeServer"];
 }
 
 // $zenithTocquevilleSunrise = 90.25;
@@ -23,22 +23,22 @@ include_once("functionCookie.php");
 if (isset($_GET['input_mode'])) {
     if ($_GET['input_mode'] == True) {
         $_SESSION["DL-USER"] = "light";
-        modeCookie("light", $typeServer);
+        modeCookie("light", $_SESSION["typeServer"]);
     } elseif ($_SESSION["DL-USER"] == "light" && $_GET['input_mode'] == False) {
         $_SESSION["DL-USER"] = "dark";
-        modeCookie("dark", $typeServer);
+        modeCookie("dark", $_SESSION["typeServer"]);
     }
 } elseif (isset($_COOKIE["MODE_USER"])) {
     $_SESSION["DL-USER"] = $_COOKIE["MODE_USER"];
 } elseif (!isset($_SESSION["DL-USER"])) {
     $_SESSION["DL-USER"] = "dark";
-    modeCookie("dark", $typeServer);
+    modeCookie("dark", $_SESSION["typeServer"]);
 }
 
 include_once('functionsTest.php');
 include_once('Calculs-functions.php');
 include_once('WithSQL-functions.php');
-$dbNW = connectDataBase($typeServer);
+$dbNW = connectDataBase($_SESSION["typeServer"]);
 $allStats = get_totalStats($dbNW);
 
 //Initialisation des premières valeurs de stats

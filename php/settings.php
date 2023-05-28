@@ -13,6 +13,10 @@ include_once('variables_functions/variables.php');
 <body>
     <?php include_once('styleWithPHP.php'); ?>
     <?php include_once('othersMobile.php'); ?>
+    <?php if ($_SESSION["connected"] == "true") : ?>
+        <p>ok</p>
+    
+    <?php else : ?>
     <section class="error mobile">
         <a href="index.php">
             <p>Erreur 404</p>
@@ -21,4 +25,5 @@ include_once('variables_functions/variables.php');
     <div class="mobile">
         <?php include('buttonMode.php'); ?>
     </div>
+    <?php endif; ?>
 </body>
