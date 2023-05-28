@@ -4,6 +4,8 @@
                 --colorText : black;
                 --color:#4ABDF2;
                 --colorSoft: #1BACEF;
+                --colorMedium: #005982;
+                --colorMediumHight : #005982;
                 --colorDegrade : linear-gradient(4.82deg, #4ABDF2 -17.48%, #FFFFFF 118.09%);
                 --colorPannel : #F6FCFF;
                 --colorPannelText : #005982;
@@ -16,6 +18,8 @@
                 --colorText : white;
                 --color:#FEC601;
                 --colorSoft: #FFE380;
+                --colorMedium: #FFE380;
+                --colorMediumHight : white;
                 --colorDegrade : linear-gradient(4.82deg, #FFC700 -17.48%, #FFFFFF 118.09%);
                 --colorPannel : #121212;
                 --colorPannelText : white;

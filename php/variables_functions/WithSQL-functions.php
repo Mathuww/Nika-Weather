@@ -107,3 +107,12 @@ function getStatsLastRecent(PDO $dbMySQL): array
     $statsRecentStatement->execute();
     return $statsRecentStatement->fetchAll()[0];
 }
+
+function getAdmin(PDO $dbMySQL): array
+{
+    //Récupérer les données de la table stats
+    $sql_admin = 'SELECT * FROM nw_admin';
+    $adminStatement = $dbMySQL->prepare($sql_admin);
+    $adminStatement->execute();
+    return $adminStatement->fetchAll();
+}
