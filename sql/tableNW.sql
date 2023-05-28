@@ -66,7 +66,7 @@ CREATE TABLE
 CREATE TABLE
     NW_admin (
         username VARCHAR(32) PRIMARY KEY,
-        password VARBINARY(128),
+        password VARBINARY(72),
         cookies BOOLEAN
     );
 
