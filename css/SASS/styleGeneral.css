@@ -180,13 +180,13 @@ body {
   gap: 8px;
   width: auto;
 }
-.NW-pannel .NW-pannel-header .NW-pannel-header_text .NW-pannel-header_text-title {
+.NW-pannel .NW-pannel-header .NW-pannel-header_text .NW-pannel-header_text--title {
   color: var(--colorMediumHight);
 }
 .NW-pannel .NW-pannel-header .NW-pannel-header_text a {
   text-decoration: none;
 }
-.NW-pannel .NW-pannel-header .NW-pannel-header_text a .NW-pannel-header_text-subtitle {
+.NW-pannel .NW-pannel-header .NW-pannel-header_text a .NW-pannel-header_text--subtitle {
   color: var(--colorMedium);
   opacity: 0.82;
 }
@@ -317,20 +317,34 @@ body {
   font-size: 12px;
   line-height: 12px;
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-id {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--id {
   order: 0;
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-password {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password {
   order: 1;
+  position: relative;
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password input {
+  width: calc(94% - 30px);
+  padding-right: 30px;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeOpenSVG, .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeCloseSVG {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeOpenSVG svg, .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeCloseSVG svg {
+  width: 25px;
+  height: 20px;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit {
   order: 2;
   margin-top: 36px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn {
   margin-left: auto;
   margin-right: 4%;
   float: right;
@@ -348,7 +362,7 @@ body {
   text-transform: uppercase;
   color: var(--color);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn::after, .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn::before {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn::after, .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn::before {
   content: "";
   display: block;
   height: 100%;
@@ -361,21 +375,21 @@ body {
   transition: 0.5s ease-out;
   background-color: var(--color);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn::before {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn::before {
   top: -50%;
   left: -25%;
   transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn:hover::before {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:hover::before {
   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn:hover::after {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn:hover {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:hover {
   color: var(--colorPannel);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form-submit .btn:active {
+.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:active {
   filter: brightness(0.7);
   transform: scale(0.98);
 }

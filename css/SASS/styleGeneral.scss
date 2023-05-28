@@ -223,14 +223,14 @@ body {
             gap: 8px;
             width: auto;
             
-            .NW-pannel-header_text-title {
+            .NW-pannel-header_text--title {
                 color: var(--colorMediumHight);
             }
 
             a {
                 text-decoration: none;
                 
-                .NW-pannel-header_text-subtitle {
+                .NW-pannel-header_text--subtitle {
                     color: var(--colorMedium);
                     opacity: 0.82;
                 }
@@ -409,15 +409,33 @@ body {
                 line-height: 12px;
             }
     
-            .connect-Space_form-id {
+            .connect-Space_form--id {
                 order: 0;
             }
 
-            .connect-Space_form-password {
+            .connect-Space_form--password {
                 order: 1;
+                position: relative;
+
+                input  {
+                    width: calc(94% - 30px);
+                    padding-right: 30px;
+                }
+
+                .connect-Space_form--password--eyeOpenSVG, .connect-Space_form--password--eyeCloseSVG {
+                    position: absolute;
+                    top: 17px;
+                    right: 16px;
+
+                    svg {
+                        width: 25px;
+                        height: 20px;
+                    }
+                }
+
             }
 
-            .connect-Space_form-submit {
+            .connect-Space_form--submit {
                 order: 2;
                 margin-top: 36px;
                 display: flex;
@@ -526,7 +544,7 @@ body {
                 height: 98%;
 
             }
-            
+
             margin-bottom: 40px;
         }
     }

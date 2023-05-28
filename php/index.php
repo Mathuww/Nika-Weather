@@ -44,8 +44,8 @@
         <section class="NW-pannel mobile">
             <div class="NW-pannel-header">
                 <div class="NW-pannel-header_text">
-                    <span class="NW-pannel-header_text-title title">Notre Bulletin Météo</span>
-                    <a href="./dataTempAverage.php"><span class="NW-pannel-header_text-subtitle subtitle">Maintenant, le
+                    <span class="NW-pannel-header_text--title title">Notre Bulletin Météo</span>
+                    <a href="./dataTempAverage.php"><span class="NW-pannel-header_text--subtitle subtitle">Maintenant, le
                             <?php
                             echo date('d/m/Y à H:i', strtotime($LastStats["date"]));
                             ?>
