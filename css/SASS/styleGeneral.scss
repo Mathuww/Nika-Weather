@@ -65,6 +65,11 @@ body {
     font-family: 'Epilogue', sans-serif;
     margin: 0;
     color: var(--colorText);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .zeroMargin {
@@ -334,18 +339,16 @@ body {
 
 
 .NW-pannelBodyPage {
-    position: absolute;
-    bottom: 0;
-    top:0;
-
     margin-top: 50px;
+    flex: 1;
+
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    
+
+
     padding: 25px 25px 0px;
     gap: 12px;
-
-    width: 90%;
 
     background: var(--colorPannel);
     border-radius: 40px 40px 0px 0px;
@@ -480,8 +483,8 @@ body {
     }
 
     .NW-footer {
-        margin: 0;
         padding: 0;
+        margin-bottom: 0;
         margin-top: auto;
     }
 }
