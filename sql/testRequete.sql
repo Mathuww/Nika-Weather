@@ -1,4 +1,6 @@
--- Active: 1683009167113@@127.0.0.1@3306@nwv1
+-- Active: 1683757039173@@127.0.0.1@3306@nwv1
+
+PRAGMA foreign_keys = ON;
 
 SELECT date, t.duration
 FROM nw_stats s
@@ -26,3 +28,5 @@ SELECT
     );
 
 SET time_zone = "+02:00";
+
+SELECT name FROM NW_settings;

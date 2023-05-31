@@ -418,19 +418,24 @@ body {
                 position: relative;
 
                 input  {
-                    width: calc(94% - 30px);
-                    padding-right: 30px;
+                    width: calc(94% - 32px);
+                    padding-right: 32px;
                 }
 
                 .connect-Space_form--password--eyeOpenSVG, .connect-Space_form--password--eyeCloseSVG {
                     position: absolute;
                     top: 17px;
-                    right: 16px;
+                    right: 25px;
+                    color: black;
 
                     svg {
                         width: 25px;
                         height: 20px;
                     }
+                }
+
+                .connect-Space_form--password--eyeCloseSVG {
+                    display : none;
                 }
 
             }
@@ -554,6 +559,10 @@ body {
         margin-bottom: 0;
         margin-top: auto;
     }
+
+    .NW-footer--extra {
+        height: 150px;
+    }
 }
 
 
@@ -636,6 +645,12 @@ body {
             margin:12;
         }
     }
+
+    .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password {
+        .connect-Space_form--password--eyeOpenSVG, .connect-Space_form--password--eyeCloseSVG {
+            right: 20px;
+        }
+    }
 }
 
 @media (max-width: 360px){
@@ -648,6 +663,12 @@ body {
 
         .NW-meta__quote {
             margin: 6;
+        }
+    }
+
+    .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password {
+        .connect-Space_form--password--eyeOpenSVG, .connect-Space_form--password--eyeCloseSVG {
+            right: 15px;
         }
     }
 }

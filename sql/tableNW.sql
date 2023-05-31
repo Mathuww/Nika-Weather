@@ -1,6 +1,6 @@
--- Active: 1684319228248@@127.0.0.1@3306@nwv1
+-- Active: 1683757039173@@127.0.0.1@3306@nwv1
 
--- DROP TABLE IF EXISTS nwv1;
+DROP TABLE IF EXISTS nwv1;
 
 CREATE DATABASE IF NOT EXISTS nwv1;
 
@@ -12,15 +12,15 @@ CREATE DATABASE IF NOT EXISTS nwv1;
 
 -- /*Effacer les deux tables*/
 
--- DROP TABLE IF EXISTS NW_receps;
+DROP TABLE IF EXISTS NW_receps;
 
--- DROP TABLE IF EXISTS NW_stats;
+DROP TABLE IF EXISTS NW_stats;
 
--- DROP TABLE IF EXISTS NW_optiTemps;
+DROP TABLE IF EXISTS NW_optiTemps;
 
 DROP TABLE IF EXISTS NW_admin;
 
--- DROP TABLE IF EXISTS NW_settings;
+DROP TABLE IF EXISTS NW_settings;
 
 CREATE TABLE
     NW_receps (
@@ -54,6 +54,7 @@ CREATE TABLE
         stat_sunrise TIME,
         stat_sunset TIME,
         optiTemps_id DECIMAL(2, 0),
+        settingsID INT,
         FOREIGN KEY (optiTemps_id) REFERENCES NW_optiTemps (id)
     );
 
@@ -72,9 +73,10 @@ CREATE TABLE
 
 CREATE TABLE
     NW_settings (
-        name VARCHAR(32) PRIMARY KEY,
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        name VARCHAR(24) UNIQUE,
         value BOOLEAN,
-        content VARCHAR(256),
+        content VARCHAR(92),
         lastDate_Modification DATETIME,
         lastUser_Modification VARCHAR(32),
         FOREIGN KEY (lastUser_Modification) REFERENCES NW_admin(username)

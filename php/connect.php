@@ -1,7 +1,11 @@
 <?php
 include_once('variables_functions/variables.php');
-if (isset($_COOKIE["connected"]) or isset($_SESSION["connected"])) {
+if (isset($_COOKIE["connected"]) and $_COOKIE["connected"] == true) {
     header("Location: ./settings.php");
+} elseif (isset($_SESSION["connected"]) and $_SESSION["connected"] = true) {
+    if ($_SESSION["connected"] == "true") {
+        header("Location: ./settings.php");
+    } 
 }
 $admins = getAdmin($dbNW);
 $adminsID = array_column($admins, 'username');
@@ -13,12 +17,14 @@ if (isset($_POST["input-adminID"]) and isset($_POST["input-adminPassword"])) {
     } elseif (!in_array($_POST["input-adminPassword"], $adminsPassword)) {
         $signalClient = "Votre mot de passe (faux!) ne correspond pas à nos données.";
     } else {
-        $_SESSION["connected"] = true;
-        $signalClient = "Bienvenue " . $_POST["input-adminID"] . " chez Nika Weather";
+        $_SESSION["connected"] = "true";
+        $_SESSION["user"] = $_POST["input-adminID"];
+        $signalClient = "Salut " . $_SESSION["user"] . " chez Nika Weather";
         foreach ($admins as $admin) {
             if ($admin["username"] == $_POST["input-adminID"]) {
                 if ($admin["cookies"] == true) {
                     allCookieNW("connected", true, getDurationSchool(time()), $_SESSION["typeServer"]);
+                    allCookieNW("user", $_POST["input-adminID"], getDurationSchool(time()), $_SESSION["typeServer"]);
                 } elseif ($admin["cookies"] == false) {
                     unset($_COOKIE["connected"]);
                 }
