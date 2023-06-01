@@ -16,6 +16,10 @@ VALUES ("Mathuww", "Gr@nd 0r@l", true), ("Chouard", "NSI2023_NW", true), (
         "MarineLeStylo",
         "MathéoStop",
         true
+    ), (
+        "Gentilesse",
+        "01235679",
+        false
     );
 
 INSERT INTO
@@ -59,7 +63,7 @@ VALUES (
     ), (
         "temp_min",
         "Accès public aux archives de données de températures minimum",
-        true,
+        1,
         now(),
         "Mathuww"
     ), (

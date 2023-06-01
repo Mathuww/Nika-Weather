@@ -37,6 +37,7 @@ if (isset($_GET['input_mode'])) {
 
 include_once('functionsTest.php');
 include_once('Calculs-functions.php');
+// include_once('functionsTest.php');
 include_once('WithSQL-functions.php');
 $dbNW = connectDataBase($_SESSION["typeServer"]);
 $allStats = get_totalStats($dbNW);

@@ -42,3 +42,69 @@ function get_feelsLike()
 {
     return NULL;
 }
+
+function verifSettings (
+    bool $archive = false, 
+    bool $graphique = false, 
+    bool $sunrise = false, 
+    bool $sunset = false, 
+    bool $temp_average = false, 
+    bool $temp_min = false, 
+    bool $temp_max = false, 
+    bool $temp_feelsLike = false, 
+    bool $humidity = false, 
+    bool $pressure = false, 
+    bool $wind_direction = false, 
+    bool $wind_speed = false,
+    bool $precipitation = false, 
+    bool $precipitation_speed = false
+) :array
+{ 
+    if ($archive != "on") {
+        $archive = 0; 
+    } if ($graphique != "on") {
+        $graphique = 0;
+    } if ($sunrise != "on") {
+        $sunrise = 0;
+    } if ($sunset != "on") {
+        $sunset = 0;
+    } if ($temp_average != "on") {
+        $temp_average = 0;
+    } if ($temp_min != "on") {
+        $temp_min = 0;
+    } if ($temp_max != "on") {
+        $temp_max = 0;
+    } if ($temp_feelsLike != "on") {
+        $temp_feelsLike = 0;
+    } if ($humidity != "on") {
+        $humidity = 0;
+    } if ($pressure != "on") {
+        $pressure = 0;
+    } if ($wind_direction != "on") {
+        $wind_direction = 0;
+    } if ($wind_speed != "on") {
+        $wind_speed = 0;
+    } if ($precipitation != "on") {
+        $precipitation = 0;
+    } if ($precipitation_speed != "on") {
+        $precipitation_speed = 0;
+    }
+
+    $settingsParameters = [
+        "archive" => $archive,
+        "graphique" => $graphique,
+        "sunrise" => $sunrise,
+        "sunset" => $sunset,
+        "temp_average" => $temp_average,
+        "temp_min" => $temp_min,
+        "temp_max" => $temp_max,
+        "temp_feelsLike" => $temp_feelsLike,
+        "humidity" => $humidity,
+        "pressure" => $pressure,
+        "wind_direction" => $wind_direction,
+        "wind_speed" => $wind_speed,
+        "precipitation" => $precipitation,
+        "precipitation_speed" => $precipitation_speed
+    ];
+    return $settingsParameters;
+}

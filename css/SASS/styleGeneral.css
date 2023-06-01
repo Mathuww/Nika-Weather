@@ -206,6 +206,31 @@ body {
   color: var(--colorMedium);
   text-decoration: underline;
 }
+.NW-pannel .NW-pannel-data .NW-pannel-data__box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+.NW-pannel .NW-pannel-data .NW-pannel-data__box img {
+  width: 40px;
+  height: 40px;
+  padding-right: 12px;
+}
+.NW-pannel .NW-pannel-data .NW-pannel-data__box .NW-pannel-data__box__text {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.NW-pannel .NW-pannel-data .NW-pannel-data__box .NW-pannel-data__box__text .NW-pannel-data__box__text--title {
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 12px;
+}
+.NW-pannel .NW-pannel-data .NW-pannel-data__box .NW-pannel-data__box__text .NW-pannel-data__box__text--value {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+}
 
 .NW-footer {
   background-color: var(--colorPannel);
@@ -231,8 +256,7 @@ body {
 .NW-footer .NW-footer__primaryInfo .NW-footer__primaryInfo--texte {
   display: block;
   font-weight: 400;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   order: 0;
   margin: 0;
   width: 100%;
@@ -248,8 +272,7 @@ body {
 .NW-footer .NW-footer__secondaryInfo {
   display: block;
   font-weight: 400;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   margin: 0;
   order: 1;
   align-self: stretch;
@@ -293,16 +316,54 @@ body {
 .NW-pannelBodyPage .connect-Space {
   width: 100%;
 }
-.NW-pannelBodyPage .connect-Space .connect-Space_advert {
+.NW-pannelBodyPage .connect-Space .connect-Space__advert {
   text-align: center;
   margin-top: 24px;
   color: var(--colorSoft);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form {
+.NW-pannelBodyPage .connect-Space #connect-Space__form {
   width: 100%;
   height: auto;
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .box-connect {
+.NW-pannelBodyPage .connect-Space #connect-Space__form input {
+  width: 94%;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space__form label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--id {
+  order: 0;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--password {
+  order: 1;
+  position: relative;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--password input {
+  width: calc(94% - 32px);
+  padding-right: 32px;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--password .connect-Space__form--password--eyeOpenSVG, .NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--password .connect-Space__form--password--eyeCloseSVG {
+  position: absolute;
+  top: 17px;
+  right: 25px;
+  color: black;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--password .connect-Space__form--password--eyeOpenSVG svg, .NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--password .connect-Space__form--password--eyeCloseSVG svg {
+  width: 25px;
+  height: 20px;
+}
+.NW-pannelBodyPage .connect-Space #connect-Space__form .connect-Space__form--password .connect-Space__form--password--eyeCloseSVG {
+  display: none;
+}
+.NW-pannelBodyPage .connect-Space .connect-Space__aide {
+  text-align: right;
+  margin-top: 32px;
+  margin-right: 4%;
+  color: var(--colorSoft);
+}
+.NW-pannelBodyPage .box-connect {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -311,46 +372,14 @@ body {
   width: 100%;
   height: auto;
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form input {
-  width: 94%;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--id {
-  order: 0;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password {
-  order: 1;
-  position: relative;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password input {
-  width: calc(94% - 32px);
-  padding-right: 32px;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeOpenSVG, .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeCloseSVG {
-  position: absolute;
-  top: 17px;
-  right: 25px;
-  color: black;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeOpenSVG svg, .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeCloseSVG svg {
-  width: 25px;
-  height: 20px;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--password .connect-Space_form--password--eyeCloseSVG {
-  display: none;
-}
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit {
+.NW-pannelBodyPage .connect-Space__form--submit {
   order: 2;
-  margin-top: 36px;
+  margin-top: 28px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn {
+.NW-pannelBodyPage .connect-Space__form--submit .btn {
   margin-left: auto;
   margin-right: 4%;
   float: right;
@@ -368,7 +397,7 @@ body {
   text-transform: uppercase;
   color: var(--color);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn::after, .NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn::before {
+.NW-pannelBodyPage .connect-Space__form--submit .btn::after, .NW-pannelBodyPage .connect-Space__form--submit .btn::before {
   content: "";
   display: block;
   height: 100%;
@@ -381,29 +410,23 @@ body {
   transition: 0.5s ease-out;
   background-color: var(--color);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn::before {
+.NW-pannelBodyPage .connect-Space__form--submit .btn::before {
   top: -50%;
   left: -25%;
   transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:hover::before {
+.NW-pannelBodyPage .connect-Space__form--submit .btn:hover::before {
   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:hover::after {
+.NW-pannelBodyPage .connect-Space__form--submit .btn:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:hover {
+.NW-pannelBodyPage .connect-Space__form--submit .btn:hover {
   color: var(--colorPannel);
 }
-.NW-pannelBodyPage .connect-Space #connect-Space_form .connect-Space_form--submit .btn:active {
+.NW-pannelBodyPage .connect-Space__form--submit .btn:active {
   filter: brightness(0.7);
   transform: scale(0.98);
-}
-.NW-pannelBodyPage .connect-Space .connect-Space_aide {
-  text-align: right;
-  margin-top: 40px;
-  margin-right: 4%;
-  color: var(--colorSoft);
 }
 .NW-pannelBodyPage .NW-info .NW-info__intro {
   margin-top: 0;
@@ -429,7 +452,6 @@ body {
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
-  margin-bottom: 40px;
 }
 .NW-pannelBodyPage .NW-info .NW-info__video iframe {
   position: absolute;
@@ -439,10 +461,29 @@ body {
   width: 98%;
   height: 98%;
 }
+.NW-pannelBodyPage .NW-settings #NW-settings__form .NW-settings__form__list {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  padding-bottom: 22px;
+}
+.NW-pannelBodyPage .NW-settings #NW-settings__form .NW-settings__form__list .NW-settings__form__list--content {
+  order: 0;
+  font-weight: 500;
+  font-size: 12px;
+  margin-right: 30px;
+}
+.NW-pannelBodyPage .NW-settings #NW-settings__form .NW-settings__form__list .NW-settings__form__list--input {
+  order: 1;
+  transform: scale(1.2);
+  margin: auto;
+  margin-right: 10px;
+}
 .NW-pannelBodyPage .NW-footer {
   padding: 0;
   margin-bottom: 0;
   margin-top: auto;
+  padding-top: 60px;
 }
 .NW-pannelBodyPage .NW-footer--extra {
   height: 150px;

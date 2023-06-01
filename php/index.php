@@ -59,27 +59,128 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <!-- <?php
-                    //Incluire le test
-                    //include_once('../archive/testAffichage.php'); 
-                    ?> -->
 
+            <div class="NW-pannel-data">
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_tempAverage(LIGHT).png" alt="Icon Température" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_tempAverage(DARK).png" alt="Icon Température"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Ressenti</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["stat_temp_feelsLike"]; ?>°C</span>
+                    </div>
+                </div>
 
-            <p>Ressenti : <?php
-                            if (isset($LastStats["stat_temp_feelsLike"])) {
-                                echo $LastStats["stat_temp_feelsLike"];
-                            } else {
-                                echo "NULL";
-                            } ?></p>
-            <p>Température : <?php echo $LastStats["recep_temp_average"]; ?>°C</p>
-            <p>Humidité : <?php echo $LastStats["recep_hum"]; ?>%</p>
-            <p>Direction du vent : <?php echo $LastStats["recep_wind_direction"]; ?>°</p>
-            <p>Vitesse du vent : <?php echo $LastStats["recep_wind_speed"]; ?> km/h</p>
-            <p>Précipitation : <?php echo $LastStats["recep_precipitation"]; ?> mm</p>
-            <p>Vitesse de précipitation : <?php echo $LastStats["recep_precipitation_speed"]; ?> km/h</p>
-            <p>Pression atmosphérique : <?php echo $LastStats["recep_pressure"]; ?> hPa</p>
-            <p>Aurore (la fin) : <?php echo $LastStats["stat_sunrise"]; ?> h</p>
-            <p>Crépuscule (la début) : <?php echo $LastStats["stat_sunset"]; ?> h</p>
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_humidity(LIGHT).png" alt="Icon Humiditée" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_humidity(DARK).png" alt="Icon Humiditée"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Humiditée</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["recep_temp_average"]; ?>%</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_windDirection(LIGHT).png" alt="Icon Vent (direction)" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_windDirection(DARK).png" alt="Icon Vent (direction)"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Direction du vent</span>
+                        <span class="NW-pannel-data__box__text--value">~Nowt (<?php echo $LastStats["recep_wind_direction"]; ?>°)</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_windSpeed(LIGHT).png" alt="Icon Vent (vitesse)" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_windSpeed(DARK).png" alt="Icon Vent (vitesse)"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Vitesse du vent</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["recep_wind_speed"]; ?> km/h</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_precipitation(LIGHT).png" alt="Icon Précipitation (quantité)" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_precipitation(DARK).png" alt="Icon Précipitation (quantité)"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Précipitations</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["recep_precipitation"]; ?> mm</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_precipitationSpeed(LIGHT).png" alt="Icon Précipitation (vitesse)" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_precipitationSpeed(DARK).png" alt="Icon Précipitation (vitesse)"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Vitesse de précipitations</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["recep_precipitation_speed"]; ?> km/h</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_feelsLike(LIGHT).png" alt="Icon Ressentie" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_feelsLike(DARK).png" alt="Icon Ressentie"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Ressenti</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["stat_temp_feelsLike"]; ?>°C</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_feelsLike(LIGHT).png" alt="Icon Pression Atmosphérique" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_feelsLike(DARK).png" alt="Icon Pression Atmosphérique"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Pression atmosphérique</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["recep_pressure"]; ?>hPa</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_leverSoleil(LIGHT).png" alt="Icon Aurore" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_leverSoleil(DARK).png" alt="Icon Aurore"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Aurore (la fin)</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["stat_sunrise"]; ?>hPa</span>
+                    </div>
+                </div>
+
+                <div class="NW-pannel-data__box">
+                    <?php if ($_SESSION["DL-USER"] == "light") : ?>
+                        <img src="../resources/icons/M_coucherSoleil(LIGHT).png" alt="Icon Crépuscule" />
+                    <?php endif; ?><?php if ($_SESSION["DL-USER"] == "dark") : ?>
+                        <img src="../resources/icons/M_coucherSoleil(DARK).png" alt="Icon Crépuscule"/>
+                    <?php endif; ?>
+                    <div class="NW-pannel-data__box__text">
+                        <span class="NW-pannel-data__box__text--title">Crépuscule (le début)</span>
+                        <span class="NW-pannel-data__box__text--value"><?php echo $LastStats["stat_sunset"]; ?>hPa</span>
+                    </div>
+                </div>
+            </div>
 
             <a href="./dataTempAverage.php" class="NW-pannel-infoArchive subtitle">
                 <p>Accéder aux archives météorologiques illustrées avec des graphiques</p>

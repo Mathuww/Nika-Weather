@@ -111,8 +111,59 @@ function getStatsLastRecent(PDO $dbMySQL): array
 function getAdmin(PDO $dbMySQL): array
 {
     //Récupérer les données de la table stats
-    $sql_admin = 'SELECT * FROM nw_admin';
+    $sql_admin = 'SELECT * FROM nw_admin;';
     $adminStatement = $dbMySQL->prepare($sql_admin);
     $adminStatement->execute();
     return $adminStatement->fetchAll();
+}
+
+function getSettings(PDO $dbMySQL):array
+{
+    //Récupérer les données de la table settings
+    $sql_settings = 'SELECT name, value, content FROM nw_settings;';
+    $settingsStatement = $dbMySQL->prepare($sql_settings);
+    $settingsStatement->execute();
+    return $settingsStatement->fetchAll();
+}
+
+function delSettings(PDO $dbMySQL)
+{
+    //Supprimer les valeurs de la table settings
+    $sql_delSettings = 'DELETE FROM NW_settings;';
+    $delSettingsStatement = $dbMySQL->prepare($sql_delSettings);
+    $delSettingsStatement->execute();
+}
+
+
+function transfert_setSettings (PDO $dbMySQL, array $settings, string $user, array $settingsParameters)
+{
+    delSettings($dbMySQL);
+
+    // echo "<pre>";
+    // print_r($settingsParameters);
+    // echo "<pre/>";
+    
+    foreach ($settings as $setting) {
+        $sql_settingsINSERT = 'INSERT INTO nw_settings(name, value, content, lastDate_Modification, lastUser_Modification)
+        VALUES (:name, :value, :content, :lastDate_Modification, :lastUser_Modification);';
+        $insertSettings = $dbMySQL->prepare($sql_settingsINSERT);
+
+        if ($setting["name"] != "cookieMode" and $setting["name"] != "siteNewtwork") {
+            $insertSettings->execute([
+                'name' => $setting["name"],
+                'value' => $settingsParameters[$setting["name"]],
+                'content' => $setting["content"],
+                'lastDate_Modification' => date('Y-m-d h:i:s'),
+                'lastUser_Modification' => $user
+            ]);
+        } else {
+            $insertSettings->execute([
+                'name' => $setting["name"],
+                'value' => $setting["value"],
+                'content' => $setting["content"],
+                'lastDate_Modification' => date('Y-m-d h:i:s'),
+                'lastUser_Modification' => $user
+            ]);
+        }
+    }
 }
