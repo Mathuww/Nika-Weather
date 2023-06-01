@@ -117,13 +117,32 @@ function getAdmin(PDO $dbMySQL): array
     return $adminStatement->fetchAll();
 }
 
-function getSettings(PDO $dbMySQL):array
+function getSettings(PDO $dbMySQL): array
 {
     //Récupérer les données de la table settings
     $sql_settings = 'SELECT name, value, content FROM nw_settings;';
     $settingsStatement = $dbMySQL->prepare($sql_settings);
     $settingsStatement->execute();
     return $settingsStatement->fetchAll();
+}
+
+function getApplicationSettings(PDO $dbMySQL): array
+{
+    //Récupérer les données de la table settings
+    $sql_applicationSettings = 'SELECT name, value FROM nw_settings;';
+    $applicationSettingsStatement = $dbMySQL->prepare($sql_applicationSettings);
+    $applicationSettingsStatement->execute();
+    $applicationSettings = $applicationSettingsStatement->fetchAll();
+
+    foreach ($applicationSettings as $applicationSetting) {
+        $settingsVerif[$applicationSetting["name"]] =  $applicationSetting["value"];
+    }
+
+    // echo "<pre>";
+    // print_r($settingsVerif);
+    // echo "<pre/>";
+
+    return $settingsVerif;
 }
 
 function delSettings(PDO $dbMySQL)
@@ -135,14 +154,14 @@ function delSettings(PDO $dbMySQL)
 }
 
 
-function transfert_setSettings (PDO $dbMySQL, array $settings, string $user, array $settingsParameters)
+function transfert_setSettings(PDO $dbMySQL, array $settings, string $user, array $settingsParameters)
 {
     delSettings($dbMySQL);
 
     // echo "<pre>";
     // print_r($settingsParameters);
     // echo "<pre/>";
-    
+
     foreach ($settings as $setting) {
         $sql_settingsINSERT = 'INSERT INTO nw_settings(name, value, content, lastDate_Modification, lastUser_Modification)
         VALUES (:name, :value, :content, :lastDate_Modification, :lastUser_Modification);';

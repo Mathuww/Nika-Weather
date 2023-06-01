@@ -82,6 +82,12 @@ body {
   line-height: 12px;
 }
 
+.NW-accueil {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .NW-header {
   display: flex;
   flex-direction: row;
@@ -158,9 +164,7 @@ body {
   align-items: flex-start;
   height: 100%;
   border-radius: 40px 40px 0px 0px;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
+  flex: 1;
 }
 .NW-pannel .NW-pannel-header {
   display: flex;
@@ -234,7 +238,6 @@ body {
 
 .NW-footer {
   background-color: var(--colorPannel);
-  padding: 20px 4.5%;
   height: 120px;
   display: flex;
   flex-direction: column;
@@ -243,6 +246,10 @@ body {
   order: 8;
   font-size: 12px;
   font-style: italic;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: auto;
+  padding-top: 60px;
 }
 .NW-footer .NW-footer__primaryInfo {
   display: flex;
@@ -286,6 +293,10 @@ body {
   order: 2;
   text-decoration: none;
   color: var(--colorText);
+}
+
+.NW-footer--extra {
+  height: 150px;
 }
 
 .NW-pannelBodyPage {
@@ -478,15 +489,6 @@ body {
   transform: scale(1.2);
   margin: auto;
   margin-right: 10px;
-}
-.NW-pannelBodyPage .NW-footer {
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: auto;
-  padding-top: 60px;
-}
-.NW-pannelBodyPage .NW-footer--extra {
-  height: 150px;
 }
 
 .error {
